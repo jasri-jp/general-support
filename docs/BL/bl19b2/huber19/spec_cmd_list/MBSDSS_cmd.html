@@ -1,0 +1,240 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script type="text/javascript" src="./java/browser.js"></script>
+
+<style Type="text/css">
+<!--
+#contents {
+	line-height: 1.7em;
+	}
+	
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+
+table {
+	color: #333333;
+	margin-top: 5px;
+	margin: 10px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+	
+table.b{
+    margin: 0px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+
+th.a{
+	background-color: #66FF66;
+	border: 1px #888888 solid;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
+	width: 150px;
+	}
+th.b{
+	border: 1px #888888 solid;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 0.8em;
+	}
+
+td{
+	border: 1px #888888 solid; 
+	line-height: 20px;
+	padding: 5px 0px 5px 10px;
+	line-height: 18px;
+	text-align: left;
+	}
+	
+
+-->
+</style>
+
+ </head>
+<body>
+
+
+
+
+
+
+
+
+
+
+<title>SPECコマンドリスト(BL19B2）</title>
+</head>
+<body id="bodyid">
+<a name="TopofPage"></a>
+<div id="page">
+<div id="page2">
+<div id="banner">
+<h1>SPECコマンドリスト(BL19B2）</h1>
+</div>
+
+<table class=b cellspacing="0" cellpadding="0" id="menu"><tr><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'" style="border-left-width:0">
+<a href="basic_cmd.html"><span style="color: #0066FF;">回折計制御コマンド</span></a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="monochro_cmd.html">光源制御コマンド</a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="utility_cmd.html">便利なコマンド </a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="make_cmd.html">コマンドを作ろう</a></td></tr></table>
+
+<div id="main">
+<table id="image" cellspacing="0" cellpadding="0"><tr><td valign="top">
+<h3></h3>
+</td></tr></table>
+<div id="left">
+<div id="sidemenu">
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="basic_cmd.html">① 基本制御コマンド</a></li>
+<li><a href="exp_cmd.html">② 実験用コマンド</a></li>
+<li><a href="camp_cmd.html">③ カレントアンプ制御コマンド </a></li>
+<li><a href="MBSDSS_cmd.html"><span style="font-weight: bold; color: #0066FF;">④ MBS、DSS制御コマンド</span></a></li>
+<li><a href="accessary_cmd.html">⑤ 周辺機器制御コマンド</a></li>
+</ul>
+
+
+<h2>　　　　　</h2>
+<ul>
+<li>BL19B2多軸回折計トップに戻る</li>
+</ul>
+
+<!--
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+</ul>
+-->
+</div>
+</div>
+<div id="right">
+<h2>MBS、DSS制御コマンド</h2>
+<p>
+
+<!--
+ここに文章を書いてください。
+-->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">MBS、DSS遠隔操作</big><br>
+<br>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意
+点</span>：<br>
+１．<span style="color: rgb(255, 0, 0); font-weight: bold;">PLCでMBS,DSSコント
+ロールを　LOCAL ONLY　→　LOCAL＋REMOTE　に切り替えておくこと</span><br>
+２．<span style="color: rgb(255, 0, 0);">動作中にCtrl-cで中断しないこと</span><br>
+<br>
+
+</div>
+
+<br>
+
+
+<table width=400>
+    <tr bgcolor="#cccccc">
+	  <td></td>
+      <td>動作</td>
+	  <td>コマンド</td>
+    </tr>
+	<tr>
+      <td rowspan="3">MBS</td>
+	  <td>現在の状態表示</td>
+	  <th class=a>getMBS</th>
+    </tr>
+	<tr>
+	  <td>OPEN</td>
+	  <th class=a>MBS_op</th>
+    </tr>
+	<tr>
+      <td>CLOSE</td>
+	  <th class=a>MBS_cl</th>
+    </tr>
+	<tr>
+      <td rowspan="3">DSS</td>
+	  <td>現在の状態表示</td>
+	  <th class=a>getDSS</th>
+    </tr>
+	<tr>
+	  <td>OPEN</td>
+	  <th class=a>DSS_op</th>
+    </tr>
+	<tr>
+      <td>CLOSE</td>
+	  <th class=a>DSS_cl</th>
+    </tr>
+</table>
+<br>
+
+
+<hr style="width: 100%; height: 2px;"><span
+ style="color: rgb(255, 0, 0); font-weight: bold;">MBS,DSSコントロール
+／LOCAL ONLY　→　LOCAL＋REMOTEの切り替え方<br>
+</span><br>
+
+<table width="600">
+  <tr>
+    <td>
+      <a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_01.jpg' %}"><img src="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_01.jpg' %}"  style="width: 192px; height: 144px;"></a>
+    </td>
+	<td>１．PLC左下のスイッチ（写真左下の赤丸）をタッチする。（表示：LOCAL ONLY）</td>
+  <tr>
+    <td>
+      <a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_02.jpg' %}"><img src="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_02.jpg' %}"  style="width: 192px; height: 144px;"></a>
+    </td>
+	<td>２．出てきたメニューの「LOCAL＋REMOTE」（写真赤丸）をタッチする。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_03.jpg' %}"><img src="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_03.jpg' %}"  style="width: 192px; height: 144px;"></a>
+    </td>
+	<td>３．ボタンの色が赤色に変われば「ENTER」（写真赤丸）をタッチする。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_04.jpg' %}"><img src="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/img/bl19b2_remote_04.jpg' %}"  style="width: 192px; height: 144px;"></a>
+    </td>
+	<td>４．PLC画面左下のスイッチの表示（写真左下の白丸）が赤く代わり、表示が「LOCAL＋REMOTE」に変わればOK。</td>
+  </tr>
+<table>
+
+<!--
+</p>
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+-->
+
+
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+</div>
+<div id="copy">
+Copyright (C) 2005 (財)高輝度光科学研究センター　産業利用推進室 , All rights reserved.  
+</div>
+</div>
+</div>
+</div>
+<img src="img/menubg2.png" alt="omo" id="omo">
+</body>
+</html>

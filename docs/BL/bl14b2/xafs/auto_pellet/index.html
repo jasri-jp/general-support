@@ -1,0 +1,337 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="Keywords" content="先端大型研究施設,放射光,高輝度,ビームライン,産業利用,BL19B2,BL14B2,BL46XU,XAFS,ガス設備,イメージング,多軸回析計,x線反射率,大型デバイシェラーカメラ,光源,XAFS,金属薄膜,8軸回析計,固体酸化物型燃料電池,粉末回折,結晶構造解析,産業,SPring-8,スプリング8,高輝度光科学研究センター,JASRI,文部科学省">
+    <meta name="Description" content="SPring-8 産業利用推進室は高輝度放射光を産業活用に利用していただくためのご支援をいたします">
+    <title>SPring-8産業利用推進室</title>
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+  </head>
+  <body>
+    <a name="top"></a>
+    <div id="container">
+      <!-- -->
+    </div>
+  </body>
+</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- ↓↓↓この行追加 -->
+<html xmlns:t="urn:schemas-microsoft-com:time" lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>BL14B2 XAFS測定試料調整自動化システム</title>
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <link href="../../../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/main.css" rel="stylesheet" type="text/css" media="print">
+    <style type="text/css">
+  <!--
+
+#contents {
+	line-height: 1.7em;
+	}
+
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+	a:link.un {color:#ffffff; text-decoration:none;}
+	a:visited.un {color:#ffffff; text-decoration:none;}
+	a:hover.un {color:ffffff; text-decoration:none;}
+	a:active.un {color:#ffffff; text-decoration:none;}
+
+
+/*左メニュー*/
+#navBar{
+	margin-top: 50px;
+	padding-left: 1px;
+	padding-bottom: 8px;
+	float: left;
+	}
+
+#navBar p.title{
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #333333;
+	padding: 5px 0 2px 0;
+	margin: 0 0 1px 0;
+	border-width: 2px 0 0 0;
+	}
+
+#navBar ul{
+	background-color: #663300;
+	list-style-type: none;
+	margin-bottom: 20px;
+	padding: 0 0 1px 0;
+ 	}
+#navBar ul li{
+	width: 140px;
+	margin: 0px 1px 0px 1px;
+	border: solid #663300;
+	border-width: 1px 0 0 0;
+	}
+
+#navBar ul li a{
+	width: 140px;
+	color: #333333;
+	display: block;
+	text-decoration: none;
+	vertical-align: top;
+	line-height: 23px;
+	background-color: #FFFFFF;
+	text-indent: 6px;
+	}
+#navBar ul li a:hover{
+	background-color:#FED0E0;
+	}
+
+table.a {
+	color: #333333;
+	margin-top: 5px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	font-size: 1.0em;
+	}
+
+table.b {
+	font-size: 1.0em;
+	line-height: 15px;
+	}
+
+table.c {
+	font-size: 87%;
+	border-style:none;
+	}
+
+td.a {
+	border: 1px #888888 solid;
+	padding: 3px 10px; 
+	line-height: 20px;
+	}
+
+td.b {
+	border-width: 0 0 0 0;
+	padding: 3px 10px; 
+	line-height: 15px;
+	}
+
+td a {
+
+	}
+
+.pdf {
+	border: 0;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+	vertical-align:middle;
+}
+
+p	{
+	padding: 0;
+	margin: 5px 0px 15px 25px;
+	}
+
+.box {
+	padding: 0;
+	margin: 5px 20px 15px 0px;
+	}
+
+.accent{
+	color: #dc143c;
+	font-weight: bold;
+	}
+
+/* コンテンツバー */
+.bar02 {
+	background-image: url(xafs/image/spring_note_husen.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 5px 0px 15px -10px;
+	padding-left: 28px;
+	font-size: 98%;
+	font-weight: bold;
+	}
+
+<!--------------------------------------------------------->
+/*基本設定*/
+body{
+	font-size: 13px;
+	*font-size: small;
+	text-align: center;
+	color: #333333;
+	margin: 0px;
+	}
+
+/*ヘッダー*/
+#head{
+	margin: 3px 0px 0px 0px;
+	}
+
+/* 上部メニューバー */
+#menu{
+	font-size: 14px;
+	}
+
+/*メイン（左メニュー含む）*/
+#main{
+	font-size: 13px;
+	}
+
+/*ライトコンテンツ*/
+#right{
+	line-height: 1.5;
+	}
+
+/*フッター*/
+#footer{
+	font-size: 13px;
+	}
+
+#footer_lower{
+	margin: 5px 0px 0px 0px;
+	}
+
+<!--------------------------------------------------------->
+
+  -->
+  </style>
+  </head>
+  <!--------------------------------------------------------->
+  <!--------------------------------------------------------->
+  <!--------------------------------------------------------->
+  <!--------------------------------------------------------->
+  <!--------------------------------------------------------->
+  <!---------------------------------------------------------> <body onload="setInterval('sc_tbl()',1500);">
+    <a name="top"></a>
+    <div id="container">
+      <div id="head"> <img src="../../../image/header.jpg" alt="ヘッダー"> </div>
+      <!--------------------------------------------------------->
+      <script language="JavaScript">
+var tY=0;fY=0;sP=0;
+function sc_tbl(){
+tY=sP;
+tt1.from=fY;
+tt1.to=tY;
+tt1.beginElement()
+fY=tY;
+}
+function scPt(){
+sP=document.body.scrollTop;
+}
+document.onmousemove = scPt;
+onscroll=scPt;
+</script><!--?IMPORT namespace="t" implementation="#default#time2"-->
+      <div id="main">
+        <!--------------------------------------------------------->
+        <!---
+<div id="left_menu">--->
+        <div id="navBar">
+          <!---
+<DIV style="position:relative;width:150;background-color:white;padding:5;border:2 outset;" align="left"><DIV style="position:relative;background-color:snow;">--->
+          <div style="position:relative;background-color:white;">
+            <ul>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#outline">概要</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#new">新着情報</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#caution">注意事項</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#information">関連情報</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#staff">担当者・連絡先</a> </li>
+            </ul>
+            <ul>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="{% include link.html path='/BL/bl14b2/xafs/auto_pellet/manual.html' %}">マニュアル</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="{% include link.html path='/BL/bl14b2/xafs/auto_pellet/example.html' %}">測定例</a> </li>
+            </ul>
+            <t:animate id="tt1" attributename="top" begin="indefinite" from="" to=""
+
+              dur="1" autoreverse="false" fill="freeze" decelerate="1"> </t:animate></div>
+        </div>
+        <!-- left_menu 終わり -->
+        <div id="right">
+          <div id="path"><a href="../../../../index.html" class="ls">HOME</a>　＞　<a
+
+              class="ls" href="../../index.html">BL14B2 XAFS Ⅱ</a>　＞ BL14B2
+            XAFS測定試料調整自動化システム</div>
+          <div class="bar">BL14B2 XAFS測定試料調整自動化システム</div>
+          <div class="icon"><a name="outline"></a>概要<!---      No.--->
+          </div>
+          <p style="text-align: justify;"> BL14B2
+            XAFS測定試料調整自動化システムは、透過XAFS測定用ペレット試料の作成を効率良く行うために、作業工程のうち(1)窒化ホウ素の分注、(2)試料と窒化ホウ素の攪
+            拌、(3)ペレット化の作業を自動で連続的に行えるようヒト型ロボットを活用したものです。ユーザーがペレット成型に必要な試料を予め粉砕、定量
+            し、容器に入れたものを本システムに準備することでペレット試料最大60個を約5時間で成型することができます。本シス
+            テムにはペレット成型時の
+            各操作の制御及び連携にヒト型ロボット「NEXTAGE」を活用してます。また、成型完了後、カートリッジにセットされた試料はそのまま
+            BL14B2の試料自動交換システム(Humming Bird)にて測定が可能です。</p>
+          <div style="text-align: center;"><img src="image/auto_robot.jpg" alt=""
+
+              style="width: 510px; height: 382px;"></div>
+          <p><br>
+          </p>
+          <div class="icon"><a name="new"></a>新着情報</div>
+          <p><span style="color: rgb(255, 0, 0); font-weight: bold;">2024/10/7&nbsp;</span>
+            &nbsp;&nbsp; <a href="{% include link.html path='/BL/bl14b2/xafs/auto_pellet/example.html' %}" class="ls">測定例を掲載しました</a><br>
+            <span style="color: rgb(255, 0, 0); font-weight: bold;">2024/9/13&nbsp;</span>
+            &nbsp;&nbsp; BL14B2 XAFS測定試料調整自動化システムのサイトを作成しました</p>
+          <div class="sign"><a href="{% include link.html path='/BL/bl14b2/xafs/auto_pellet/history.html' %}" class="ls"><font size="2">更新履
+                歴一覧</font></a></div>
+          <div class="icon"><a name="caution"></a>注意事項</div>
+          <p><span style="color: rgb(255, 0, 0); font-weight: bold;">※<span style="text-decoration: underline;">本
+                システムの使用を希望される方は、マニュアル(左メニューのリンク先)を必ずお読みください。</span></span><br>
+            <br>
+          </p>
+          <div class="icon"><a name="information"></a>関連情報</div>
+          <p>本システムについては以下の文献をご参照ください。<a href="http://db-event.jpn.org/deim2013/proceedings/pdf/d4-2.pdf"><br>
+            </a></p>
+          <p><a href="http://www.spring8.or.jp/pdf/en/ann_rep/21/10.BL14B2.pdf">Ofuchi,
+              H. &amp; Honma, T (2021). <i>SPring-8/SACLA Annual Report FY2021</i>,
+              41-43.</a></p>
+          <p><a href="http://db-event.jpn.org/deim2013/proceedings/pdf/d4-2.pdf"></a></p>
+          <p><br>
+            <a href=""><span></span></a></p>
+          <p> </p>
+          <div class="icon"><a name="staff"></a><b>担当者・連絡先</b> <br>
+          </div>
+          <p> （注）e-mailアドレスは＠マーク以下を省略していますので、<br>
+            アカウントの後に@spring8.or.jpを付けてください。 <br>
+            <br>
+            大渕　博宣<br>
+            公益財団法人 高輝度光科学研究センター（JASRI）<br>
+            〒679-5198　兵庫県佐用郡佐用町光都1丁目1-1<br>
+            Phone : 0791-58-0832<br>
+            FAX : 0791-58-0830<br>
+            e-mail : ofuchi</p>
+          <!---------------------------------------------------------> </div>
+        <!-- right 終わり --> </div>
+      <!-- main 終わり --> </div>
+    <div style="text-align: center;"><html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div id="footer">
+      |　<a href="../../../../new/index.html" class="foot">HOME</a>　
+      |　<a href="../../../../new/copyright-policy.html" class="foot">著作権の帰属について</a>　
+      |　<a href="../../../../new/inquiries.html" class="foot">お問い合わせ</a>
+      |　<a href="#top" class="foot">ページトップへ</a>　|
+      <div id="footer_lower">
+        <h3>Copyright(C)2009 JASRI All Rights Reserved.</h3>
+      </div>
+    </div>
+    <!-- footer 終わり -->
+    <!--------------------------------------------------------->
+    <!------ container 終わり ------>
+    <br>
+  </body>
+</html>
+</div>
+  </body>
+</html>

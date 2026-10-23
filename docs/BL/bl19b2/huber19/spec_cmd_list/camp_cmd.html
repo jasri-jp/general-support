@@ -1,0 +1,236 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script type="text/javascript" src="./java/browser.js"></script>
+
+<style Type="text/css">
+<!--
+#contents {
+	line-height: 1.7em;
+	}
+	
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+
+table {
+	color: #333333;
+	margin-top: 5px;
+	margin: 10px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+	
+table.b{
+    margin: 0px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+
+th.a{
+	background-color: #66FF66;
+	border: 1px #888888 solid;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
+	width: 150px;
+	}
+th.b{
+	border: 1px #888888 solid;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 0.8em;
+	}
+
+td{
+	border: 1px #888888 solid; 
+	line-height: 20px;
+	padding: 5px 0px 5px 10px;
+	line-height: 18px;
+	text-align: left;
+	}
+	
+
+-->
+</style>
+
+ </head>
+<body>
+
+
+
+
+
+<title>SPECコマンドリスト(BL19B2）</title>
+</head>
+<body id="bodyid">
+<a name="TopofPage"></a>
+<div id="page">
+<div id="page2">
+<div id="banner">
+<h1>SPECコマンドリスト(BL19B2）</h1>
+</div>
+
+<table class=b cellspacing="0" cellpadding="0" id="menu"><tr><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'" style="border-left-width:0">
+<a href="basic_cmd.html"><span style="color: #0066FF;">回折計制御コマンド</span></a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="monochro_cmd.html">光源制御コマンド</a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="utility_cmd.html">便利なコマンド </a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="make_cmd.html">コマンドを作ろう</a></td></tr></table>
+
+<div id="main">
+<table id="image" cellspacing="0" cellpadding="0"><tr><td valign="top">
+<h3></h3>
+</td></tr></table>
+<div id="left">
+<div id="sidemenu">
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="basic_cmd.html">① 基本制御コマンド</a></li>
+<li><a href="exp_cmd.html">② 実験用コマンド</a></li>
+<li><a href="camp_cmd.html"><span style="font-weight: bold; color: #0066FF;">③ カレントアンプ制御コマンド </span></a></li>
+<li><a href="MBSDSS_cmd.html">④ MBS、DSS制御コマンド</a></li>
+<li><a href="accessary_cmd.html">⑤ 周辺機器制御コマンド</a></li>
+</ul>
+
+
+<h2>　　　　　</h2>
+<ul>
+<li>BL19B2多軸回折計トップに戻る</li>
+</ul>
+
+<!--
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+</ul>
+-->
+</div>
+</div>
+<div id="right">
+<h2>ここにタイトル</h2>
+<p>
+<!--
+ここに文章を書いてください。
+-->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">カレントアンプ制御<br></big>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意点</span>：<br>
+１．カレントアンプナンバーはMonitor (i0)用が０、I1 (i1)用が１。<br>
+２．カウント時間はm×10<sup>n</sup>　m=１～９、n=-1～9<br>
+</div>
+<br>
+
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+	  <td>制御パラメータ </td>
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+	<tr>
+      <td>全パラメータ </td>
+	  <td>現在値の取得</td>
+	  <th class=a>get_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td rowspan="2">Gain</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getgain_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>変更</td>
+	  <th class=a>chgain_ca[n]</th>
+	  <th class=b>乗数：10^n　ｎ=3～10</th>
+    </tr>
+	<tr>
+      <td rowspan="5">Gain</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getsup_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>変更(絶対値)</td>
+	  <th class=a>chsup_ca[n]</th>
+	  <th class=b>電流値　(a)　：　例)　1.2e-9</th>
+    </tr>
+	<tr>
+      <td>変更(相対値)</td>
+	  <th class=a>rchsup_ca[n]</th>
+	  <th class=b>電流値　(r)　：　例)　-0.1e-9</th>
+    </tr>
+	<tr>
+      <td>auto suppression </td>
+	  <th class=a>acsup_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>OFF</td>
+	  <th class=a>csoff_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td rowspan="2">ゼロチェック</td>
+	  <td>ON</td>
+	  <th class=a>zcon_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>OFF</td>
+	  <th class=a>zcoff_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td colspan="2">Shut　Down </td>
+	  <th class=a>shut_ca[n]</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+	　<td>カウント時間</td>
+      <td>変更</td>
+	  <th class=a>chctime_dc</th>
+	  <th class=b>カウント時間/sec</th>
+    </tr>
+</table>
+
+
+<!--
+</p>
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+-->
+
+
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+</div>
+<div id="copy">
+Copyright (C) 2005 (財)高輝度光科学研究センター　産業利用推進室 , All rights reserved.  
+</div>
+</div>
+</div>
+</div>
+<img src="img/menubg2.png" alt="omo" id="omo">
+</body>
+</html>

@@ -1,0 +1,703 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="Keywords" content="先端大型研究施設,戦略活用,高輝度放射光,放射光,高輝度光,ビームライン,産業利用,BL19B2,XAFS,蛍光分析,イメージング,多軸回析計,x線反射率,大型デバイシェラー　カメラ,BL19B2,光源,光源ハッチ,透過XAFS,金属薄膜,8軸回析計,固体酸化物型燃料電池,BL46XU,粉末回折測定,結晶構造解析,エネルギー分散型蛍光X線分析,光学素子,希土類不純物,日本放射光学会,新産業創出,SPring-8,スプリング8,高輝度光科学研究センター,JASRI,文部科学省,地球シュミレータ" >
+<meta name="Description" content="SPring-8 産業利用推進室は高輝度放射光「産業利用ビームラインBL19B2」を産業活用に利用していただくためのご支援をいたします" >
+<title>SPring-8産業利用推進室 産業利用ビームライン BL19B2　HUBER多軸回折計制御プログラムSPECについて</title>
+<script type="text/javascript" src="./java/browser.js"></script>
+
+<style Type="text/css">
+<!--
+#contents {
+	line-height: 1.7em;
+	}
+	
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+	
+	a:link.un {color:#ffffff; text-decoration:none;}
+	a:visited.un {color:#ffffff; text-decoration:none;}
+	a:hover.un {color:ffffff; text-decoration:none;}
+	a:active.un {color:#ffffff; text-decoration:none;}
+
+	
+table {
+	color: #333333;
+	margin-top: 5px;
+	margin: 10px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+	
+table.b{
+    margin: 0px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+
+th.a{
+	background-color: #66FF66;
+	border: 1px #888888 solid;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
+	width: 100px;
+	}
+th.b{
+	border: 1px #888888 solid;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 0.8em;
+	}
+
+td{
+	border: 1px #888888 solid; 
+	line-height: 20px;
+	padding: 5px 0px 5px 10px;
+	line-height: 18px;
+	text-align: left;
+	}
+
+
+-->
+</style>
+
+ </head>
+<body>
+
+<title>SPECコマンドリスト(BL19B2）</title>
+</head>
+<body id="bodyid">
+<a name="TopofPage"></a>
+<div id="page">
+<div id="page2">
+<div id="banner">
+<h1>SPECコマンドリスト(BL19B2）</h1>
+</div>
+<table class=b cellspacing="0" cellpadding="0" id="menu"><tr><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'" style="border-left-width:0">
+<a href="basic_cmd.html"><span style="color: #0066FF;">回折計制御コマンド</span></a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/monochro_cmd.html' %}">光源制御コマンド</a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/utility_cmd.html' %}">便利なコマンド </a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/make_cmd.html' %}">コマンドを作ろう</a></td></tr></table>
+
+<div id="main">
+<table id="image" cellspacing="0" cellpadding="0"><tr><td valign="top">
+<h3><!--  ここにメッセージ --></h3>
+</td></tr></table>
+<div id="left">
+<div id="sidemenu">
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="basic_cmd.html"><span style="font-weight: bold; color: #0066FF;">① 基本制御コマンド</span></a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/exp_cmd.html' %}">② 実験用コマンド</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/camp_cmd.html' %}">③ カレントアンプ制御コマンド </a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/MBSDSS_cmd.html' %}">④ MBS、DSS制御コマンド</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/accessary_cmd.html' %}">⑤ 周辺機器制御コマンド</a></li>
+
+<!-- <li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li> -->
+</ul>
+
+<h2>　　　　　</h2>
+<ul>
+<li>BL19B2多軸回折計トップに戻る</li>
+</ul>
+
+
+
+<!--  
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">① 基本制御コマンド</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">② 実験用コマンド</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">③ カレントアンプ制御コマンド </a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">④ MBS、DSS制御コマンド</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">⑤ 周辺機器制御コマンド</a></li>
+</ul>
+-->
+</div>
+</div>
+
+
+<div class="list">
+<font color="#555555"><b>    </b></font>
+</div>
+
+
+<div class="list">
+<!-- -------------------------------------------------------- -->
+<a href="#1" class="ls">◇ a. 装置状態の表示 （光学ハッチ、スリット、回折計本体、カレントアンプ、リング状態）</a><br>
+<a href="#2" class="ls">◇ b. 基本動作 （軸位置表示､移動､スキャン、カウント）</a><br>
+<a href="#3" class="ls">◇ c. スリット制御</a><br>
+<a href="#4" class="ls">◇ d. 各軸設定 （位置情報リセット､リミット設定）</a><br>
+<a href="#5" class="ls">◇ e. スキャン結果グラフ表示設定</a><br>
+<!--
+<a href="#6" class="ls">◇ f. </a><br>
+-->
+<!-- -------------------------------------------------------- -->
+</div>
+
+<br>
+
+<a name="1"></a><br>
+
+<div id="right">
+<h2>a. 装置状態の表示 （光学ハッチ、スリット、回折計本体、カレントアンプ、リング状態）</h2>
+<p>
+<!--ここに文章を書いてください。 -->
+
+
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">装置
+の状態の表示　</big><br>
+<br>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意
+点</span>：<br>
+</div>
+<div style="margin-left: 40px;">dial値、user値　：　<font class="font915748">[user
+= offset + dial]</font><font class="font615748">
+　</font></div>
+<div style="margin-left: 80px;"><font class="font615748">dial値とは装置が機械的に持っている位置情報の値（PM16Cがもっているパルス値）。<br>
+user値とはSPECがソフト的にもっている位置情報の値。<br>
+&nbsp;<span style="text-decoration: underline;">回折計を制御する際にuserが用いる値はuser</span></font><span style="text-decoration: underline;">値</span>
+<br>
+</div>
+
+<br>
+<span style="font-weight: bold;">装置の全パラメータのリストアップ<br>
+</span>
+<br>
+
+<table width=500>
+    <tr bgcolor="#cccccc">
+      <td colspan="2">動作 </td>
+	  <td>コマンド</td>
+    </tr>
+    <tr>
+      <td colspan="2">全status表示 </td>
+	  <th class=a>allstat</th>
+    </tr>
+	  <td rowspan="2">回折計主要8軸の表示</td>
+	  <td>user値のみ</td>
+	  <th class=a>wua </th>
+    </tr>
+	<tr>
+      <td>user値、dial値</td>
+	  <th class=a>waa </th>
+    </tr>
+  　<tr>
+      <td colspan="2">試料ステージの表示　<a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/accessary_cmd.html' %}">詳細 </td>
+      <th class=a>was </th>
+    </tr>
+	<tr>
+	  <td colspan="2">全スリットの状態表示 </td>
+      <th class=a>sltstat </th>
+	</tr>
+	<tr>
+      <td colspan="2">全カレントアンプの状態表示 </td>
+      <th class=a>campstat </th>
+    </tr>
+	<tr>
+      <td colspan="2">光学ハッチ全status表示 </td>
+      <th class=a>optstat</th>
+    </tr>
+</table>
+<br><br>
+
+<!-- ページのトップへ移動　 -->
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+<!-- ---------------------- -->
+
+
+<a name="2"></a><br>
+</p>
+<h2>b. 基本動作 （軸位置表示､移動､スキャン、カウント）</h2>
+<p>
+<!--ここに文章を書いてください。 -->
+
+
+<span style="font-weight: bold;">軸の制御</span><br>
+
+
+<table width=650>
+    <tr bgcolor="#cccccc">
+      <td>動作 </td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+    <tr>
+      <td>移動　(絶対値) </td>
+	  <th class=a>mv</th>
+	  <th class=b>[軸名]　[位置　(a)]</th>
+    </tr>
+	<tr>
+      <td>移動　(相対値) </td>
+	  <th class=a>mvr</th>
+	  <th class=b>[軸名]　[移動距離　(ｒ)]</th>
+    </tr>
+	<tr>
+      <td>スキャン<br>(1軸/絶対値）</td>
+	  <th class=a>ascan</th>
+	  <th class=b>[軸名]　[start(a)]　[end(a)]　[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+      <td>スキャン<br>(1軸/相対値）</td>
+	  <th class=a>dscan</th>
+	  <th class=b>[軸名]　[start(a)]　[end(a)]　[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+      <td>スキャン<br>(2軸/絶対値）</td>
+	  <th class=a>a2scan</th>
+	  <th class=b>[軸名１]　[start1(a)]　[end1(a)]　[軸名2]　[start2(a)]　[end2(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+      <td>スキャン<br>(2軸/相対値）</td>
+	  <th class=a>d2scan</th>
+	  <th class=b>[軸名１]　[start1(r)]　[end1(r)]　[軸名2]　[start2(r)]　[end2(r)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+      <td>現在位置表示<br>（全軸/user値、dial値)</td>
+	  <th class=a>wa</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>現在位置表示<br>（全軸/user値のみ）</td>
+	  <th class=a>wu</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>現在位置表示<br>（１軸/user値のみ）</td>
+	  <th class=a>wp</th>
+	  <th class=b>[軸名] </th>
+    </tr>
+</table>
+
+<br>
+<span style="font-weight: bold;">検出器の制御<br>
+
+
+<table width=500>
+    <tr bgcolor="#cccccc">
+      <td>動作 </td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+    <tr>
+      <td>カウント </td>
+	  <th class=a>ct</th>
+	  <th class=b>[カウント時間] </th>
+    </tr>
+</table>
+
+<!-- ページのトップへ移動　 -->
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+<!-- ---------------------- -->
+
+
+
+
+<a name="3"></a><br>
+</p>
+<h2>c. スリット制御 </h2>
+<p>
+<!--ここに文章を書いてください。 -->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">回折
+計スリットの制御</big><br>
+<br>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意点</span>：<br>
+</div>
+<div style="margin-left: 40px;">１．スリット関係のコマンドはCtrl-Cで中断させないほうがよい。<br>
+２．カウント時間はm×10<sup>n</sup>　m=１～９、n=-1～9
+</div>
+<br>
+<span style="font-weight: bold;">入射側スリット(s1)</span><br>
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+      <td>動作 </td>
+	  <td>制御パラメータ</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+    <tr>
+      <td>現在値の取得</td>
+	  <td>全パラメータ</td>
+	  <th class=a>gets1</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td rowspan="2">変更</td>
+	  <td>横幅</td>
+	  <th class=a>s1w</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+	<tr>
+	  <td>縦幅</td>
+	  <th class=a>s1h</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+	<tr>
+      <td rowspan="2">移動<br>(絶対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>mv_s1hor</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>mv_s1ver</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+      <td rowspan="2">移動<br>(相対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>mvr_s1hor</th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>mvr_s1ver</th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+      <td rowspan="2">スキャン<br>(絶対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>ascan_s1hor</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>ascan_s1ver</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<td rowspan="2">スキャン<br>(相対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>dscan_s1hor</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>dscan_s1ver</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+</table>
+
+
+
+<span style="font-weight: bold;"><br>受光側スリット(前)　(s2)</span><br>
+<table width=700>
+    <tr bgcolor="#cccccc">
+      <td>動作 </td>
+	  <td>制御パラメータ</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+    <tr>
+      <td>現在値の取得</td>
+	  <td>全パラメータ</td>
+	  <th class=a>gets2</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td rowspan="2">変更</td>
+	  <td>横幅</td>
+	  <th class=a>s2w</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+	<tr>
+	  <td>縦幅</td>
+	  <th class=a>s2h</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+	<tr>
+      <td rowspan="2">移動<br>(絶対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>mv_s2hor</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>mv_s2ver</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+      <td rowspan="2">移動<br>(相対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>mvr_s2hor</th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>mvr_s2ver</th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+      <td rowspan="2">スキャン<br>(絶対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>ascan_s2hor</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>ascan_s2ver</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<td rowspan="2">スキャン<br>(相対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>dscan_s2hor</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>dscan_s2ver</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+</table>
+
+<span style="font-weight: bold;"><br>受光側スリット(後）　(s3)</span><br>
+<table width=700>
+    <tr bgcolor="#cccccc">
+      <td>動作 </td>
+	  <td>制御パラメータ</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+    <tr>
+      <td>現在値の取得</td>
+	  <td>全パラメータ</td>
+	  <th class=a>gets3</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td rowspan="2">変更</td>
+	  <td>横幅</td>
+	  <th class=a>s3w</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+	<tr>
+	  <td>縦幅</td>
+	  <th class=a>s3h</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+	<tr>
+      <td rowspan="2">移動<br>(絶対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>mv_s3hor</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>mv_s3ver</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+      <td rowspan="2">移動<br>(相対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>mvr_s3hor</th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>mvr_s3ver</th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+      <td rowspan="2">スキャン<br>(絶対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>ascan_s3hor</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>ascan_s31ver</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<td rowspan="2">スキャン<br>(相対値)</td>
+	  <td>水平センター位置</td>
+	  <th class=a>dscan_s3hor</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>垂直センター位置</td>
+	  <th class=a>dscan_s3ver</th>
+	  <th class=b>[start(mm)(a)]　[end(mm)(a)]<br>[測定点分割数]  [カウント時間]</th>
+    </tr>
+</table>
+
+
+<span style="font-weight: bold;"><br>
+ダブルスリット　(s2,s3連動)</span><br>
+
+<table width=600>
+    <tr bgcolor="#cccccc">
+      <td style="width: 15%;">動作</td>
+	  <td>制御パラメータ</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+	<tr>
+      <td rowspan="2">変更</td>
+	  <td>横幅</td>
+	  <th class=a>dsw</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+	<tr>
+	  <td>縦幅</td>
+	  <th class=a>dsh</th>
+	  <th class=b>[開口巾(mm)　(a)] </th>
+    </tr>
+</table>
+
+<!-- ページのトップへ移動　 -->
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+<!-- ---------------------- -->
+
+
+
+<a name="4"></a><br>
+</p>
+<h2>d. 各軸設定 （位置情報リセット､リミット設定）</h2>
+<p>
+<!--ここに文章を書いてください。 -->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">各軸設定</big><br>
+<br>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意点</span>：<br>
+</div>
+<div style="margin-left: 40px;">１．軸名はmnemonicを使用<br>
+２．dial値、user値　：　<font class="font915748">[user = offset + dial]</font><font
+ class="font615748">
+　</font></div>
+<div style="margin-left: 80px;"><font class="font615748">dial値とは装置が機械的に
+持っている位置情報の値（PM16Cがもっているパルス値）。<br>
+user値とはSPECがソフト的にもっている位置情報の値。<br>
+&nbsp;<span style="text-decoration: underline;">回折計を制御する際にuserが用いる値はuser</span></font>
+<br>
+</div>
+<br>
+
+<table width=600>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+	<tr>
+      <td>現在位置のuser値のリセット </td>
+	  <th class=a>set</th>
+	  <th class=b>[軸名]　[値　(a)]  </th>
+    </tr>
+	<tr>
+	  <td>現在位置のdial値のリセット </td>
+	  <th class=a>set_dial</th>
+	  <th class=b>[軸名]　[値　(ｒ)]  </th>
+    </tr>
+	<tr>
+	  <td>各軸のソフトリミットの設定  </td>
+	  <th class=a>set_lm </th>
+	  <th class=b>[軸名]　[lowerlimit(a)]　[upper limit(a)]   </th>
+    </tr>
+	<tr>
+	  <td>各軸のソフトリミットの表示 </td>
+	  <th class=a>lml</th>
+	  <th class=b>[軸名]</th>
+    </tr>
+</table>
+
+
+
+
+<!-- ページのトップへ移動　 -->
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+<!-- ---------------------- -->
+
+
+
+<a name="5"></a><br>
+</p>
+<h2>e. スキャン結果グラフ表示設定 </h2>
+<p>
+<!--ここに文章を書いてください。 -->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">スキャン結果グラフ表示設定</big><br>
+<br>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意点</span>：カウンター名はmnemonicを使用<br>
+</div>
+<br>
+
+
+<table width=650>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+	<tr>
+      <td>グラフに表示するカウンターの変更 </td>
+	  <th class=a>chg_pld </th>
+	  <th class=b>[カウンター名(mne)：i0／det／i1]   </th>
+    </tr>
+	<tr>
+	  <td>現在グラフに表示しているカウンターの表示 </td>
+	  <th class=a>get_pld </th>
+	  <th class=b>なし  </th>
+    </tr>
+	<tr>
+	  <td>plot環境の設定  </td>
+	  <th class=a>setplot </th>
+	  <th class=b>対話型　(表示される指示に従って設定）</th>
+    </tr>
+</table>
+
+
+<!-- ページのトップへ移動　 -->
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+<!-- ---------------------- -->
+
+
+<!--
+<a name="6"></a><br>
+</p>
+<h2>ここにタイトル</h2>
+<p>
+<!--ここに文章を書いてください。 
+</p>
+-->
+
+
+</div>
+<div id="copy">
+Copyright (C) 2005 (財)高輝度光科学研究センター　産業利用推進室 , All rights reserved.  
+</div>
+</div>
+</div>
+</div>
+<img src="img/menubg2.png" alt="omo" id="omo">
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>SPring-8 BL14B2 </title>
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+ </head>
+<body>
+
+  <p><img src="XAFS_sample_auto.ico" alt="XAFS sample" /></p>
+  
+<h1>開発履歴</h1>
+	 <ul>
+		 <li>印：開発者情報</li>
+	 </ul>
+
+	 <h2>Ver. 2.8.4 (2010.5.30)</h2>
+		<ol>
+			<li>イオンチェンバーに流すガス混合比の表示を，"Optics_推奨値_090622.xls"に準拠した値に変更。また，推奨混合比でイオンチェンバーに流したときの吸収端におけるX線吸収率を表示する機能を追加。</li>
+			<li>推奨ミラー角度の表示を，"Optics_推奨値_090622.xls"に準拠した値に変更。</li>
+			<li>Xe-L3(Z=54)のedge energyの誤り（谷口氏が発見）を訂正。</li>
+			<li>"fix"チェックボックスの既定値をオン（BNによる吸収も含めて、X線の全透過率を最適化した上で試料重量を推定）に変更。</li>
+			<li>元素名誤入力時のプログラム動作を変更。元素名の編集中に誤った元素名になると，文字色が赤または橙に変更されるとともに即座に警告ダイアログが出現する仕様であったが，ちょっと鬱陶しいのでこれを廃し，文字色変更のみで警告するように仕様を変更。（calculationボタンを押せば，従来どおり警告ダイアログは表示される。）
+			<li>「all clear」ボタン押下時のバグを修正。</li>
+			<li>マニュアル（「ご利用に関する重要なお願い」，「インストール方法」，「XAFS sample ヘルプ」）を改定。</li>
+		</ol>
+
+		<ul>
+			<li>XAFS_Sample.vb</li>
+			<ul>
+				<li>開発言語をVisulal Basic 2008 Express Editionに変更。</li>
+				<li>"fix"チェックボックス（chkIncludeBNabsForEstimation.CheckState）の既定値をオンにするため，プログラムを変更。</li>
+				<li>"Optics_推奨値_090622.xls"に準拠した推奨混合ガス混合比を表示し，かつイオンチェンバーによるX線吸収率を計算するように，サブルーチン「ICgas」を変更。</li>
+				<li>"Optics_推奨値_090622.xls"に準拠した推奨ミラー角度を表示するように，サブルーチン「txtElement0_TextChanged」を変更。
+				<li>上記5（元素名誤入力時のプログラム動作を変更）のためのプログラム変更。
+				<li>「all clear」ボタン押下時，「txtElement0.Text」をクリアし，「optTgtAtomCnt.Checked = True」にリセットするよう変更。
+				<li>オブジェクト名を一部変更。</li>
+				<li>不要と思われるルーチンをコメントアウト。</li>
+			</ul>
+
+		    <li>XrayAbsCalcFunc.vb</li>
+			<ul>
+       			<li>myu_d_myuサブルーチン中，Xe-L3(Z=54)のedge energyの誤り（谷口氏が発見）を訂正
+       			<li>Sub name_ZをXAFS_Sample.vbから移設</li>
+       			<li>イオンチェンバーのX線吸収率を計算するため，以下の関数を追加
+       			<ul>
+       				<li>Function XrayAbsByIC</li>
+	           		<li>Private Function LinearAbsCoef</li>
+					<li>Private Function LinearAbsCoef_Hirosawa</li>
+	           		<li>Private Function LinearAbsCoef_IPC</li>
+	           		<li>Private Function LinearAbsCoef_I02gas_xls</li>
+	           		<li>Private Function LinearAbsCoef_He_I02gas_xls</li>
+	           		<li>Private Function LinearAbsCoef_N2_I02gas_xls</li>
+	           		<li>Private Function LinearAbsCoef_Ar_I02gas_xls</li>
+	           		<li>Private Function LinearAbsCoef_Kr_I02gas_xls</li>
+	           	</ul>
+		</ul>
+		</ul>
+		</ol>
+
+	 <h2>Ver. 2.8.3 (2008.10.16)</h2>
+		<ol>
+			<li>Pb（Z=82）のVictreen係数の誤り（廣沢氏が発見）を訂正。</li>
+			<li>マニュアル（「ご利用に関する重要なお願い」，「インストール方法」）を改定。</li>
+		</ol>
+	 
+	 <h2>Ver. 2.8.2 (2008.3.25)</h2>
+		<ol>
+			<li>
+			推奨ミラー角度をBL14B2用に変更。<br />
+			（旧）86/(3*E<sub>min</sub>[keV]) ＜ θ[mrad]　＜　59.5/E<sub>max</sub>[keV]	<br />
+			（新）90/(3*E<sub>min</sub>[keV]) ＜ θ[mrad]　＜　60/E<sub>max</sub>[keV]
+			</li>
+			<li>Ce（Z=58）のVictreen係数設定ルーチンの誤り（愛知県産業技術研究所　中尾氏が発見）を訂正。</li>
+			<li>Hold film status機能のバグを解消。</li>
+			<li>プログラム使用期限を廃止。</li>
+			<li>フォームデザインを若干変更</li>
+		</ol>
+		<ul>
+			<li>オブジェクト名を分かりやすいように変更（例：label26 -> lblStatus）。</li>
+			<li>ToRoundUp関数，ToRoundDown関数を導入。</li>
+		</ul>
+
+	<h2>Ver. 2.8.1 (2007.11.7)</h2>
+		<ol>
+			<li>L3-edgeの適応範囲をTe(Z=52)-Bi(Z=83)からSn(Z=50)-Bi(Z=83)に拡大。この変更に伴い，Z=47-51のVictreen係数を変更（パラメータの計算は廣沢氏による）。</li>
+			<li>HelpのHTML化。</li>
+		</ol>
+		<ul>
+			<li>X線吸収係数を求めるルーチンをXrayAbsCalc.vbモジュールとして分離。</li>
+		</ul>	
+	
+	<h2>Ver. 2.8.0 (2007.10.30)</h2>
+
+		<ol>
+			<li>フォームのデザインを若干変更。</li>
+			<li>ファイルの読み込みと書き出しをメニューバーに移動。</li>
+		</ol>
+		<ul>
+			<li>
+			 Visual Basic 6版（Ver. 2.7.1) からVisual Basic 2005版へ書き換え。<br />
+			 本バージョンより開発者は廣沢氏から陰地にバトンタッチ。基本的には旧バージョンと同じ機能を持つプログラムだが，可読性向上のためと，VB6とVB2005の仕様が異なることから生じる必要性から，ルーチンを大幅に書き換えた。
+			</li>
+
+		</ul>
+
+	<h2>Ver. 2.7.1</h2>
+
+		<ol>
+			<li>ミラー推奨角の表示</li>
+			<li>イオンチャンバー用ガス推奨混合比表示</li>
+		</ol>
+		  
+	<h2>Ver. 2.6.1</h2>
+		<ol>
+			<li>
+			Lu等３種元素のmyu値の誤り訂正（Victreen係数の訂正）サポートしている全ての元素について
+			改めて確認作業を行いましたので，ほぼ完成の域に達していると思います。
+			（産業利用推進室　小金沢氏の協力による）
+			</li>
+
+			<li>”sample　form”に「substrate」を項目として追加。
+　			基板上に作成された試料において，吸収端での基板による吸収量を算出
+			</li>
+		</ol>
+
+  <hr />
+  <address>
+  TEXT版ヘルプ by 廣沢　一郎; 2007-3-6<br />
+  HTML版ヘルプ by 陰地　宏<br />
+  最終更新日; 2008-10-16<br />
+  <a href="../../../index.html">産業利用推進室ホームページ</a>
+ </address>
+
+</body>
+</html>

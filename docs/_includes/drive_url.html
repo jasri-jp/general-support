@@ -1,0 +1,12 @@
+{%- comment -%}
+  Google ドライブに置いたファイルのURLを出力する。
+  使い方: {% include drive_url.html path="/BL/bl14b2/xafs/manual/XAFS_Database_20220330.pdf" %}
+  path は現行サーバーでのパス（_data/drive.yml のキー）。
+  file_id が空のあいだは、現行サーバーの同じパスにリンクする。
+{%- endcomment -%}
+{%- assign f = site.data.drive[include.path] -%}
+{%- if f.file_id and f.file_id != "" -%}
+https://drive.google.com/file/d/{{ f.file_id }}/view
+{%- else -%}
+{{ site.legacy_url }}{{ include.path }}
+{%- endif -%}

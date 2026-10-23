@@ -1,0 +1,423 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script type="text/javascript" src="./java/browser.js"></script>
+
+<style Type="text/css">
+<!--
+#contents {
+	line-height: 1.7em;
+	}
+	
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+
+table {
+	color: #333333;
+	margin-top: 5px;
+	margin: 10px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+	
+table.b{
+    margin: 0px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+
+th.a{
+	background-color: #66FF66;
+	border: 1px #888888 solid;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
+	width: 100px;
+	}
+th.b{
+	border: 1px #888888 solid;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 0.8em;
+	}
+
+td{
+	border: 1px #888888 solid; 
+	line-height: 20px;
+	padding: 5px 0px 5px 10px;
+	line-height: 18px;
+	text-align: left;
+	}
+	
+
+-->
+</style>
+
+ </head>
+<body>
+
+<title>SPECコマンドリスト(BL19B2）</title>
+</head>
+<body id="bodyid">
+<a name="TopofPage"></a>
+<div id="page">
+<div id="page2">
+<div id="banner">
+<h1>SPECコマンドリスト(BL19B2）</h1>
+</div>
+
+<table class=b cellspacing="0" cellpadding="0" id="menu"><tr><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'" style="border-left-width:0">
+<a href="basic_cmd.html">回折計制御コマンド</span></a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="monochro_cmd.html"><span style="color: #0066FF;">光源制御コマンド</a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="utility_cmd.html">便利なコマンド </a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="make_cmd.html">コマンドを作ろう</a></td></tr></table>
+
+<div id="main">
+<table id="image" cellspacing="0" cellpadding="0"><tr><td valign="top">
+<h3></h3>
+</td></tr></table>
+<div id="left">
+<div id="sidemenu">
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="monochro_cmd.html">分光器制御コマンド</a></li>
+<li><a href="dth1tune_cmd.html">分光器⊿θ１チューン</a></li>
+<li><a href="mirror_cmd.html"><span style="font-weight: bold; color: #0066FF;">ミラー制御コマンド</span></a></li>
+<li><a href="mirrorset_cmd.html">ミラーセッティングコマンド</a></li>
+<li><a href="TCslit_cmd.html">TCスリット制御コマンド</a></li>
+<li><a href="ringcurr_cmd.html">リングカレント</a></li>
+<li><a href="optetc_cmd.html">その他</a></li>
+</ul>
+
+
+<h2>　　　　　</h2>
+<ul>
+<li>BL19B2多軸回折計トップに戻る</li>
+</ul>
+
+<!--
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+</ul>
+-->
+</div>
+</div>
+<div id="right">
+<h2>ミラー制御コマンド</h2>
+<p>
+
+<!--
+ここに文章を書いてください。
+-->
+
+<span style="font-weight: bold;"><br>ミラー</span><br>
+
+
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+	  <td colspan="2">制御パラメータ </td>
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ<br><(a)：絶対値　(r)：相対値></td>
+    </tr>
+	<tr>
+      <td rowspan="24">第1ミラー</td>
+	  <td>全パラメータ</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr1</th>
+	  <th class=b>なし </th>
+    </tr>
+	<tr>
+	  <td rowspan="5">θy(ミラー角）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr1ty</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr1ty</th>
+	  <th class=b>[角度(mrad)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr1ty </th>
+	  <th class=b>[角度(mrad)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr1ty</th>
+	  <th class=b>[start(mrad)　(a)]　[end(mrad)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr1ty </th>
+	  <th class=b>[start(mrad)　(r)]　[end(mrad)　(r)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td rowspan="5">z(高さ）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr1z</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr1z</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr1z </th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr1z</th>
+	  <th class=b>[start(mm)　(a)]　[end(mm)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr1z</th>
+	  <th class=b>[start(mm)　(a)]　[end(mm)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td rowspan="3">Bend</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr1b</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr1b</th>
+	  <th class=b>[ベンド量(pulse)　(a)] </th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr1b </th>
+	  <th class=b>[ベンド量(pulse)　(r)] </th>
+    </tr>
+	<tr>
+	  <td rowspan="5">θz(微調軸）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr1tz</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr1tz</th>
+	  <th class=b>[角度(mrad)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr1tz </th>
+	  <th class=b>[角度(mrad)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr1tz</th>
+	  <th class=b>[start(mrad)　(a)]　[end(mrad)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr1tz</th>
+	  <th class=b>[start(mrad)　(r)]　[end(mrad)　(r)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td rowspan="5">y(微調軸）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr1y</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr1y</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr1y </th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr1y</th>
+	  <th class=b>[start(mm)　(a)]　[end(mm)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr1y</th>
+	  <th class=b>[start(mm)　(r)]　[end(mm)　(r)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+      <td rowspan="24">第2ミラー</td>
+	  <td>全パラメータ</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr2</th>
+	  <th class=b>なし </th>
+    </tr>
+	<tr>
+	  <td rowspan="5">θy(ミラー角）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr2ty</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr2ty</th>
+	  <th class=b>[角度(mrad)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr2ty </th>
+	  <th class=b>[角度(mrad)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr2ty</th>
+	  <th class=b>[start(mrad)　(a)]　[end(mrad)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr2ty </th>
+	  <th class=b>[start(mrad)　(r)]　[end(mrad)　(r)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td rowspan="5">z(高さ）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr2z</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr2z</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr2z </th>
+	  <th class=b>[位置(mm)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr2z</th>
+	  <th class=b>[start(mm)　(a)]　[end(mm)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr2z</th>
+	  <th class=b>[start(mm)　(a)]　[end(mm)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td rowspan="3">Bend</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr2b</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr2b</th>
+	  <th class=b>[ベンド量(pulse)　(a)] </th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr2b </th>
+	  <th class=b>[ベンド量(pulse)　(r)] </th>
+    </tr>
+	<tr>
+	  <td rowspan="5">θz(微調軸）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr2tz</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr2tz</th>
+	  <th class=b>[角度(mrad)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr2tz </th>
+	  <th class=b>[角度(mrad)　(r)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr2tz</th>
+	  <th class=b>[start(mrad)　(a)]　[end(mrad)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr2tz</th>
+	  <th class=b>[start(mrad)　(r)]　[end(mrad)　(r)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td rowspan="5">y(微調軸）</td>
+	  <td>現在値の取得</td>
+	  <th class=a>getmr2y</th>
+	  <th class=b>なし</th>
+    </tr>
+   <tr>
+	  <td>変更(絶対値）</td>
+	  <th class=a>mv_mr2y</th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+    <tr>
+	  <td>変更(相対値）</td>
+	  <th class=a>mvr_mr2y </th>
+	  <th class=b>[位置(mm)　(a)]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（絶対値)</td>
+	  <th class=a>ascan_mr2y</th>
+	  <th class=b>[start(mm)　(a)]　[end(mm)　(a)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+	<tr>
+	  <td>スキャン<br>（相対値)</td>
+	  <th class=a>dscan_mr2y</th>
+	  <th class=b>[start(mm)　(r)]　[end(mm)　(r)]<br>[分割数]　[カウント時間]</th>
+    </tr>
+</table>
+
+
+
+</p>
+
+<!--
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+-->
+
+
+
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+</div>
+<div id="copy">
+Copyright (C) 2005 (財)高輝度光科学研究センター　産業利用推進室 , All rights reserved.  
+</div>
+</div>
+</div>
+</div>
+<img src="img/menubg2.png" alt="omo" id="omo">
+</body>
+</html>

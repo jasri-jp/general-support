@@ -1,0 +1,709 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja-JP">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="Keywords" content="先端大型研究施設,放射光,高輝度,ビームライン,産業利用,BL19B2,BL14B2,BL46XU,XAFS,イメージング,多軸回析計,x線反射率,大型デバイシェラーカメラ,光源,XAFS,金属薄膜,8軸回析計,固体酸化物型燃料電池,粉末回折,結晶構造解析,産業,SPring-8,スプリング8,高輝度光科学研究センター,JASRI,文部科学省">
+    <meta name="Description" content="SPring-8 産業利用推進室は高輝度放射光を産業活用に利用していただくためのご支援をいたします">
+    <title>SPring-8産業利用推進室 BL14B2</title>
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/print.css" rel="stylesheet" type="text/css" media="print">
+    <style type="text/css">
+
+#contents {
+	line-height: 1.7em;
+	}
+
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+	a:link.un {color:#ffffff; text-decoration:none;}
+	a:visited.un {color:#ffffff; text-decoration:none;}
+	a:hover.un {color:ffffff; text-decoration:none;}
+	a:active.un {color:#ffffff; text-decoration:none;}
+
+
+/*左メニュー*/
+#navBar{
+	margin-top: 50px;
+	padding-left: 1px;
+	padding-bottom: 8px;
+	float: left;
+	}
+
+#navBar p.title{
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #333333;
+	padding: 5px 0 2px 0;
+	margin: 0 0 1px 0;
+	border-width: 2px 0 0 0;
+	}
+
+#navBar ul{
+	background-color: #663300;
+	list-style-type: none;
+	margin-bottom: 20px;
+	padding: 0 0 1px 0;
+ 	}
+#navBar ul li{
+	width: 140px;
+	margin: 0px 1px 0px 1px;
+	border: solid #663300;
+	border-width: 1px 0 0 0;
+	}
+
+#navBar ul li a{
+	width: 140px;
+	color: #333333;
+	display: block;
+	text-decoration: none;
+	vertical-align: top;
+	line-height: 23px;
+	background-color: #FFFFFF;
+	text-indent: 6px;
+	}
+#navBar ul li a:hover{
+	background-color:#FED0E0;
+	}
+
+table.a {
+	color: #333333;
+	margin-top: 5px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	font-size: 1.0em;
+	}
+
+table.b {
+	font-size: 1.0em;
+	line-height: 15px;
+	}
+
+table.c {
+	font-size: 87%;
+	border-style:none;
+	}
+
+td.a {
+	border: 1px #888888 solid;
+	padding: 3px 10px; 
+	line-height: 20px;
+	}
+
+td.b {
+	border-width: 0 0 0 0;
+	padding: 3px 10px; 
+	line-height: 15px;
+	}
+
+td a {
+
+	}
+
+.pdf {
+	border: 0;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+	vertical-align:middle;
+}
+
+p	{
+	padding: 0;
+	margin: 5px 0px 15px 25px;
+	}
+
+.box {
+	padding: 0;
+	margin: 5px 20px 15px 0px;
+	}
+
+.accent{
+	color: #dc143c;
+	font-weight: bold;
+	}
+
+/* コンテンツバー */
+.bar02 {
+	background-image: url(xafs/image/spring_note_husen.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 5px 0px 15px -10px;
+	padding-left: 28px;
+	font-size: 98%;
+	font-weight: bold;
+	}
+
+<!-- -->
+/*基本設定*/
+body{
+	font-size: 13px;
+	*font-size: small;
+	text-align: center;
+	color: #333333;
+	margin: 0px;
+	}
+
+/*ヘッダー*/
+#head{
+	margin: 3px 0px 0px 0px;
+	}
+
+/* 上部メニューバー */
+#menu{
+	font-size: 14px;
+	}
+
+/*メイン（左メニュー含む）*/
+#main{
+	font-size: 13px;
+	}
+
+/*ライトコンテンツ*/
+#right{
+	line-height: 1.5;
+	}
+
+/*フッター*/
+#footer{
+	font-size: 13px;
+	}
+
+#footer_lower{
+	margin: 5px 0px 0px 0px;
+	}
+
+  </style>
+  </head>
+  <!--　-->
+  <!--　-->
+  <!--　-->
+  <!--　-->
+  <!--　-->
+  <!--　--> <body onload="setInterval('sc_tbl()',1500);"> <a name="top"></a>
+    <div id="container">
+      <!-- -->
+      <div id="head"> <img src="../image/header.jpg" alt="ヘッダー"> </div>
+      <!-- menu 終わり -->
+      <script type="text/javascript">
+var tY=0;fY=0;sP=0;
+function sc_tbl(){
+tY=sP;
+tt1.from=fY;
+tt1.to=tY;
+tt1.beginElement()
+fY=tY;
+}
+function scPt(){
+sP=document.body.scrollTop;
+}
+document.onmousemove = scPt;
+onscroll=scPt;
+</script><!--?IMPORT namespace="t" implementation="#default#time2"-->
+      <div id="main">
+        <!--
+<div id="left_menu">-->
+        <div id="navBar">
+          <!--
+<DIV style="position:relative;width:150;background-color:white;padding:5;border:2 outset;" align="left"><DIV style="position:relative;background-color:snow;">-->
+          <div style="position:relative;background-color:white;">
+            <p class="title">BL14B2 XAFS</p>
+            <ul>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="http://www.spring8.or.jp/wkg/BL14B2/instrument/lang/INS-0000001468/instrument_summary_view"
+
+                  target="_blank" rel="noopener">ビームラインの概要</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="http://www.spring8.or.jp/wkg/BL14B2/instrument/lang/INS-0000001469/instrument_summary_view"
+
+                  target="_blank" rel="noopener">XAFS測定装置</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="{% include link.html path='/BL/bl14b2/xafs/in-situ_02/gas_system.html' %}">ガス供給排気装置関連</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="xafs/standardDB/index.html">XAFS標準試料<br>
+                  &nbsp;データベース</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="{% include link.html path='/BL/bl14b2/xafs/auto_pellet/index.html' %}">XAFS測定試料<br>
+                  &nbsp;調整自動化システム</a> </li>
+            </ul>
+            <p class="title">お役立ち情報</p>
+            <ul>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#20080207">Manual</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#20080116">技術情報</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="clk(this.innerHTML)">
+                <a href="#20090529">リンク集</a> </li>
+            </ul>
+            <!-- <t:animate id="tt1" attributename="top" begin="indefinite" from="" to=""
+              dur="1" autoreverse="false" fill="freeze" decelerate="1"> </t:animate>　-->
+          </div>
+        </div>
+        <!-- left_menu 終わり -->
+        <div id="right">
+          <!-- -->
+          <div id="path"><a href="{% include link.html path='/new/index.html' %}" class="ls">HOME</a>　＞　
+            BL14B2 XAFS</div>
+          <div class="bar">BL14B2（XAFS Ⅱ）</div>
+          <div class="icon">What's　<img class="pdf" src="xafs/image/new01.gif" alt="">
+            <font class="accent">　　　Updated 2025/5/23</font>
+            <!--      No.-->
+          </div>
+          <!-- 更新履歴 start -->
+          <!-- Updated 2018/06/08 マニュアル最新版アップ（XAFS測定手順【透過法】【蛍光法・19素子半導体検出器】・DSP計測系調整手順・DSP計測系測定手順）、BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2018/03/29 マニュアル最新版アップ（XAFS測定手順 Appendix、XAFS測定手順【Sample Catcher & Auto-XAFS】【透過法】） -->
+          <!-- Updated 2018/01/28 マニュアル最新版アップ（ガス供給排気装置ユーザーマニュアル、ガス供給排気装置運用方針） -->
+          <!-- Updated 2018/01/10 遠隔XAFS測定ホームページ公開 -->
+          <!-- Updated 2017/12/01 XAFSデータ変換プログラム改訂版アップ -->
+          <!-- Updated 2017/11/04 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2017/01/06 XAFS標準試料データベース公開 -->
+          <!-- Updated 2016/12/01 ペレット試料作成マニュアル最新版アップ -->
+          <!-- Updated 2016/04/17 マニュアル最新版アップ(XAFS測定手順 【蛍光法・19素子半導体検出器】・アナログ計測系調整手順) -->
+          <!-- Updated 2015/02/25 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2015/02/12 マニュアル最新版アップ(XAFS測定手順 Appendix) -->
+          <!-- Updated 2015/01/21 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(XAFS測定手順 Appendix) -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(XAFS測定手順 【透過法】) -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(XAFS測定手順 【転換電子収量法】) -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(XAFS測定手順 【蛍光法・19素子半導体検出器】・アナログ計測系調整手順・アナログ計測系測定手順) -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(XAFS測定手順 【蛍光法・19素子半導体検出器】斜入射測定手順) -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(XAFS測定手順 【低温測定】・Cryostat試料取付け手順・Cryostat調整手順) -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(温度調節器使用手順（Local） -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(ガス流量制御プログラム） -->
+          <!-- Updated 2015/01/09 マニュアル最新版アップ(温度調節器使用手順（反応ガス雰囲気下in-situXAFS自動測定プログラム） -->
+          <!-- Updated 2014/12/16 ダウンロード集計cgi削除 -->
+          <!-- Updated 2013/12/26 XAFSデータ変換プログラム最新版(Ver.3.0)アップ -->
+          <!-- Updated 2013/04/10 XAFS試料調製ガイドプログラム最新版(Ver.2.8.4 Win7対応版)アップ -->
+          <!-- Updated 2012/05/24 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2012/05/22 蛍光X線スペクトルシミュレーションプログラム最新版アップ -->
+          <!-- Updated 2012/01/24 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2011/12/20 蛍光X線スペクトルシミュレーションプログラム最新版(期限無し)アップ -->
+          <!-- Updated 2011/05/20 マニュアル最新版アップ(温度調節器 Local) -->
+          <!-- Updated 2011/05/18 マニュアル最新版アップ(PILATUSセットアップ手順) -->
+          <!-- Updated 2011/05/18 マニュアル最新版アップ(Sample Catcher & Auto-XAFS) -->
+          <!-- Updated 2011/01/05 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2010/12/10 NIアプリケーションコンテストリンク追加 -->
+          <!-- Updated 2010/11/16 マニュアル最新版アップ(温度調節器 Remote制御) -->
+          <!-- Updated 2010/10/13 HTML暗号化解除 -->
+          <!-- Updated 2010/09/08 XAFS試料調製ガイドプログラム最新版(Ver.2.8.4)アップ -->
+          <!-- Updated 2010/06/17 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2010/04/27 試料自動交換システム(Sample Catcher)紹介動画アップ -->
+          <!-- Updated 2010/02/23 蛍光X線スペクトルシミュレーションプログラム最新版(～111031)アップ -->
+          <!-- Updated 2009/09/25 BL14B2標準試料リスト最新版アップ -->
+          <!-- Updated 2009/09/14 マニュアル最新版アップ(温度調節器) -->
+          <!-- Updated 2009/07/30 BL14B2標準試料リストをアップ -->
+          <!-- Updated 2009/07/14 マニュアル最新版アップ(光学機器調整 Auto-Optics) -->
+          <!-- Updated 2009/07/01 headerメニュー変更 -->
+          <!-- Updated 2009/05/29 "10.10.27.135"を"support.spring8.or.jp"に置換 -->
+          <!-- Updated 2009/05/19 HPのデザイン変更 -->
+          <!-- Updated 2009/05/18 マニュアル最新版アップ(XAFS測定手順 Appendix＆透過法＆Lytle＆転換電子収量法) -->
+          <!-- Updated 2009/01/30 蛍光X線スペクトルシミュレーションプログラム最新版(～100331)アップ -->
+          <!-- Updated 2009/01/05 HTML暗号化&"Visitor No."削除 -->
+          <!-- Updated 2008/12/26 smoothscroll.js追加 -->
+          <!-- Updated 2008/12/18 光学素子調整マニュアル最新版アップ -->
+          <!-- Updated 2008/11/17 蛍光X線スペクトルシミュレーションプログラム最新版(～090331)アップ -->
+          <!-- Updated 2008/11/10 XAFS測定手順[Lytle]マニュアル最新版アップ -->
+          <!-- Updated 2008/10/17 XAFS試料調製ガイドプログラム最新版(Ver.2.8.3)アップ -->
+          <!-- Updated 2008/08/19 XAFS測定手順[Lytle]マニュアル最新版アップ -->
+          <!-- Updated 2008/07/25 Appendix.pdf 内、ガス混合装置流量変更 -->
+          <!-- Updated 2008/07/18 Appendix.pdf リンクを追加（内容に変更なし） -->
+          <!-- Updated 2008/07/03 XAFS測定手順[昇温測定]マニュアルアップ -->
+          <!-- Updated 2008/06/19 温度調節器マニュアル最新版アップ -->
+          <!-- Updated 2008/05/23 XAFSデータ変換プログラム最新版(Ver.1.3)アップ -->
+          <!-- Updated 2008/04/08 XAFSデータ変換プログラム最新版(Ver.1.2)を再度アップ -->
+          <!-- Updated 2008/04/03 XAFSデータ変換プログラム最新版(Ver.1.2)を再度アップ -->
+          <!-- Updated 2008/03/31 XAFSデータ変換プログラム最新版(Ver.1.2)アップ -->
+          <!-- Updated 2008/03/27 XAFS試料調製ガイドプログラム最新版(Ver.2.8.2)アップ -->
+          <!-- Updated 2008/03/26 カウンタ機能追加(アクセス)＆ガス供給排気装置関連アップ＆温度調節器マニュアルアップ -->
+          <!-- Updated 2008/03/14 カウンタ機能追加(ダウンロード)、タイトル修正 -->
+          <!-- Updated 2008/02/07 マニュアル最新版アップ(研修会向けマニュアル) -->
+          <!-- Updated 2008/01/16 蛍光X線スペクトルシミュレーションプログラム最新版アップ -->
+          <!-- Updated 2007/11/15 XAFS試料調製ガイドプログラム最新版(Ver.2.8.1)アップ -->
+          <!-- Updated 2007/11/13 蛍光X線スペクトルシミュレーションプログラム初版アップ -->
+          <!-- Updated 2007/11/07 BL14B2対応 -->
+          <!-- Updated 2007/03/15 XAFS試料調製ガイドプログラム最新版アップ -->
+          <!-- Updated 2007/03/07 XAFS試料調製ガイドプログラム ver2.7.1をアップ -->
+          <!-- Updated 2007/03/01 マニュアル最新版アップ -->
+          <!-- Updated 2006/11/09 -->
+          <!-- 更新履歴 end --> 　・<font color="#990000"> 2025/5/23 &nbsp;&nbsp; </font><font
+
+            color="#990000"><a href="#20080207" class="ls">マニュアルを更新しました</a></font><br>
+          　・ <font color="#990000"><font color="#990000">2025/5/15 </font>
+            &nbsp;&nbsp; </font><font color="#990000"><a href="#20080207" class="ls">マ
+              ニュアルを更新しました</a></font><br>
+          <div class="sign"><a href="{% include link.html path='/BL/bl14b2/xafs/xafs_history.html' %}" class="ls"><font size="2">更
+                新履歴一覧</font></a></div>
+          <a name="20080326"></a>
+          <div class="icon"><span style="color: black;">概要　（ビームラインステータス）</span></div>
+          <table class="c" style="width: 614px; height: 129px;" border="0">
+            <tbody>
+              <tr>
+                <td class="b"> <a href="http://www.spring8.or.jp/wkg/BL14B2/instrument/lang/INS-0000001468/instrument_summary_view"
+
+                    target="_blank" rel="noopener" class="ls">ビームラインの概要</a> </td>
+                <td class="b"> （SPring-8 HP施設情報ビームラインBL14B2へのリンク） </td>
+              </tr>
+              <tr>
+                <td class="b"> <a href="http://www.spring8.or.jp/wkg/BL14B2/instrument/lang/INS-0000001469/instrument_summary_view"
+
+                    target="_blank" rel="noopener" class="ls">XAFS測定装置</a> </td>
+                <td class="b"> （SPring-8 HP施設情報ビームラインBL14B2へのリンク） </td>
+              </tr>
+              <tr>
+                <td class="b" style="width: 167px;"> <a href="{% include link.html path='/BL/bl14b2/xafs/in-situ_02/gas_system.html' %}"
+
+                    class="ls">ガス供給排気装置関連</a> </td>
+                <td class="b"> （<font class="accent">※ガス供給排気装置の使用を希望される方は必ずお
+                    読みください</font>） </td>
+              </tr>
+              <tr>
+                <td class="b"> <a href="xafs/standardDB/index.html" target="_blank"
+
+                    rel="noopener" class="ls">XAFS標準試料データベース<br>
+                    (BENTEN版)</a> </td>
+                <td class="b"> （BL14B2 XAFS標準試料データベース<br>
+                  （新データリポジトリBENTEN版）へのリンク） </td>
+              </tr>
+              <tr>
+                <td class="b"><a href="{% include link.html path='/BL/bl14b2/xafs/auto_pellet/index.html' %}" target="_blank"
+
+                    rel="noopener" class="ls">XAFS測定試料 <br>
+                    調整自動化システム</a></td>
+                <td class="b">（XAFS測定試料調整自動化システムのサイトへのリンク）<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
+          <div class="icon"><span style="color: black;">お役立ち情報</span></div>
+          <span style="color: black;"> <a name="20080207"></a> <img src="xafs/image/icon3.gif"
+
+              alt=""> <b>Manual</b></span><br>
+          <table>
+            <tbody>
+              <tr bgcolor="#cccccc">
+                <td width="460">Title</td>
+                <td width="80">updated</td>
+                <td width="110">Download file</td>
+              </tr>
+              <tr>
+                <td>光学機器調整手順（Auto-Optics）<br>
+                  <font color="#990000">※Auto-Optics 2009A第3サイクルより使用開始</font></td>
+                <td>2009.07.14</td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/BL14B2_Optics.pdf' %}" class="ls"><img class="pdf"
+
+                      src="../image/pdf_file.gif" alt=""> 564KB</a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 Appendix　<font class="accent">※必ずお読みください</font><br>
+                  　<i>θ</i> Move, Rocking Curve Measure,<br>
+                  　SSD Count Check,　Piezo Scan, <br>
+                  　エネルギー校正,<br>
+                  　Encoder Board Initialize/Reset, etc.</td>
+                <!--     <td class="a">2008.02.05</td> 【リンクを追加 内容に変更なし】 -->
+                <td><span style="color: black;">2023.09.27</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/Appendix_230927.pdf' %}" class="ls"><img class="pdf"
+
+                      src="../image/pdf_file.gif" alt=""> 1.43MB</a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 【透過法】</td>
+                <td><span style="color: black;">2023.09.27</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/XAFS_trans_230927.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 1.06MB</a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 【Lytle】</td>
+                <td><span style="color: black;">2023.09.27</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/Lytle_adjustment_230927.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 1.35MB</a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 【転換電子収量法】</td>
+                <td><span style="color: black;">2023.09.27</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/XAFS_CEY_230927.pdf' %}" class="ls"><img class="pdf"
+
+                      src="../image/pdf_file.gif" alt=""> 1.14MB</a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 【蛍光法・19素子半導体検出器】<br>
+                  　・DSP計測系<font color="#990000">調整</font>手順<br>
+                  　・DSP計測系<font color="#990000">測定</font>手順</td>
+                <td><span style="color: black;">2018.06.08<br>
+                  </span><span style="color: black;">2023.09.27</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/19SSD_DSP_adjustment_180608.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 746KB</a><br>
+                  <a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/XAFS_FY_19SSD_DSP_230927.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 1.02MB</a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 【蛍光法・19素子半導体検出器】<br>
+                  　斜入射測定手順</td>
+                <td><span style="color: rgb(0, 0, 0);">2014.02.25</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/19SSD_Grazing-incidence_140225.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 1014KB </a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 【蛍光法・7素子SDD】</td>
+                <td><span style="color: rgb(0, 0, 0);">2023.09.27</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/SPEC_SDD_230927.pdf' %}" class="ls"><img class="pdf"
+
+                      src="../image/pdf_file.gif" alt=""> 1.17MB </a></td>
+              </tr>
+              <tr>
+                <td>XAFS測定手順 【低温測定】<br>
+                  　・Cryostat試料取付け手順<br>
+                  　・Cryostat調整手順</td>
+                <td><span style="color: rgb(0, 0, 0);">2014.02.21<br>
+                    2023.09.27<br>
+                  </span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/Sample_attachment_140221.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 348KB</a><br>
+                  <a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/Cryostat_adjustment_230927.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 747KB</a></td>
+              </tr>
+              <!-- 20080207 delete start
+  <tr>    <td class="a">XAFS測定用ガス混合装置</td>    <td class="a">2007.09.28</td>    <td class="a">gas_mixture_device.pdf</td>    <td class="a"><img class="pdf" src="../image/pdf_file.gif">  208KB </td>  </tr>20080207 delete end -->
+              <tr>
+                <td>XAFS測定手順 【昇温測定】</td>
+                <td><span style="color: rgb(0, 0, 0);">2008.06.23</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/temp_trigger.pdf' %}" class="ls"><img class="pdf"
+
+                      src="../image/pdf_file.gif" alt=""> 191KB</a></td>
+              </tr>
+              <tr>
+                <td>HummingBird 自動測定</td>
+                <td><span style="color: rgb(0, 0, 0);">2025.01.10</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/HummingBird_20250110.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 874KB</a></td>
+              </tr>
+              <tr>
+                <td>温度調節器使用手順（<font color="#990000">Local</font>）</td>
+                <td><span style="color: rgb(0, 0, 0);">2024.03.28</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/Temp_control_unit_Local_240328.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 442KB</a></td>
+              </tr>
+              <tr>
+                <td>温度調節器使用手順（<font color="#990000">Remote制御</font>）</td>
+                <td><span style="color: rgb(0, 0, 0);">2010.08.18</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/Temp_control_unit_Remote.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 372KB</a></td>
+              </tr>
+              <tr>
+                <td><font color="#990000"><font color="#990000"><a href="xafs/standardDB/index.html"
+
+                        target="_blank" rel="noopener" class="ls"><img class="pdf"
+
+                          src="xafs/image/new01.gif" alt=""></a></font></font>ガ
+                  ス流量制御プログラム</td>
+                <td><span style="color: rgb(0, 0, 0);">2025.05.23</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/MFC_multi_control_250523.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 265KB</a></td>
+              </tr>
+              <tr>
+                <td>反応ガス雰囲気下in-situXAFS自動測定プログラム</td>
+                <td><span style="color: rgb(0, 0, 0);">2014.01.24</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/in-situ_measure_140124.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 1.35MB</a></td>
+              </tr>
+              <tr>
+                <td>PILATUSセットアップ手順</td>
+                <td><span style="color: rgb(0, 0, 0);">2010.05.17</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/PILATUS_setup_20100517.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 10.0MB</a></td>
+              </tr>
+              <tr>
+                <td>ペレット試料作成手順</td>
+                <td><span style="color: black;">2016.12.01</span></td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/Pellet_preparation_161201.pdf' %}" class="ls"><img
+
+                      class="pdf" src="../image/pdf_file.gif" alt=""> 363KB</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <span style="color: black;"><br>
+            <a name="20080116"></a>&nbsp; <img src="xafs/image/icon3.gif" alt=""
+
+              style="width: 6px; height: 9px;"> <b>技術情報</b></span><br>
+          <table class="a">
+            <tbody>
+              <tr bgcolor="#cccccc">
+                <td>Title</td>
+                <td>Download file</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="a"> 標準試料リスト（ <a href="{% include link.html path='/BL/bl14b2/xafs/standard.html' %}"
+
+                    class="ls">BL14B2の標準試料の一覧です</a><span style="color: rgb(0, 102, 255);">
+                  </span>）　　　<font color="#990000">2024.10.7版</font><br>
+                  標準試料リスト（ <a href="http://bl01b1.spring8.or.jp/tech/stdsample/standard.html"
+
+                    target="_blank" rel="noopener" class="ls">BL01B1が所有されている 一覧</a>
+                  ）</td>
+              </tr>
+              <tr>
+                <td>イオンチャンバーのガス選択の例</td>
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/I0gas2.xls' %}" class="ls"><img class="pdf" src="xafs/image/excel2003.gif"
+
+                      alt=""> 483KB</a></td>
+              </tr>
+              <tr>
+                <td rowspan="3" class="a">XAFS試料調製ガイドプログラム<br>
+                  　（ZIP形式圧縮ファイル）<br>
+                  　<font color="#990000">Ver.2.8.4 (2010.5.30)</font></td>
+                <!-- <td class="a"><img class="pdf" src="xafs/image/download.gif" alt="">  124KB<br> -->
+                <td><a href="{% include link.html path='/BL/bl14b2/xafs/xs_290_Readme.html' %}" class="ls"><img class="pdf"
+
+                      src="xafs/image/readme.gif" alt=""> ※はじめに必ずお読みください</a></td>
+              </tr>
+              <tr>
+                <td> <font class="accent">※Windows 7, Vista対応バージョン</font><br>
+                  .NET Framework 4のインストールが必要です<br>
+                  <a href="{% include drive_url.html path='/BL/bl14b2/xafs/xs_290.zip' %}" class="ls"><img class="pdf" src="xafs/image/download.gif"
+
+                      alt=""> 72KB</a><br>
+                  file name: xs_290.zip</td>
+              </tr>
+              <tr bgcolor="#cccccc">
+                <!-- 伸張 -->
+                <!-- <a href="../../index.html" class="ls">※はじめに必ずお読みください</a></td> -->
+                <td><font class="accent">※旧バージョン</font>（Windows XP）<br>
+                  <a href="{% include drive_url.html path='/BL/bl14b2/xafs/xs_284.zip' %}" class="ls"><img class="pdf" src="xafs/image/download.gif"
+
+                      alt=""> 72KB</a><br>
+                  file name: xs_284.zip</td>
+              </tr>
+              <!-- 20080327 delete start
+  <tr>    <td rowspan="2" class="a">XAFS試料調製ガイドプログラム <font color="#990000">Ver.2.7.1</font><br>        　（ZIP形式圧縮ファイル）</td>    <td>xs271.zip<br></td>20080327 delete end -->
+              <!-- <td class="a"><img class="pdf" src="xafs/image/download.gif" alt="">  64.9KB</td> -->
+              <!-- 20080327 delete start
+    <td class="a"><a href="{% include drive_url.html path='/BL/bl14b2/xafs/xs_290.zip' %}"><img class="pdf" src="xafs/image/download.gif" alt="">  64.9KB</a></td>  </tr>  <tr>20080327 delete end -->
+              <!-- 伸張 -->
+              <!-- 20080327 delete start
+    <td class="a">必ずお読みください.txt (Readme.txt)</td>20080327 delete end -->
+              <!-- <td class="a"><img class="pdf" src="xafs/image/readme.gif" alt="">  7KB</td> -->
+              <!-- 20080327 delete start
+    <td class="a"><img class="pdf" src="xafs/image/readme.gif" alt="">  7KB</td>  </tr>20080327 delete end -->
+              <tr>
+                <td rowspan="2" class="a"> 蛍光X線スペクトルシミュレーション　　　　　<br>
+                  プログラム<br>
+                  　（EXE形式ファイル）<br>
+                  　<font color="#990000">Ver.1.33 (2012.5.18)</font></td>
+                <!-- <td class="a"><img class="pdf" src="xafs/image/readme.gif" alt="">  7KB</td> -->
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/FXspect1_33_Readme.txt' %}" class="ls"><img class="pdf"
+
+                      src="xafs/image/readme.gif" alt=""> ※はじめに必ずお読みください</a></td>
+              </tr>
+              <tr>
+                <!-- 伸張 -->
+                <!-- <td class="a"><img class="pdf" src="xafs/image/download.gif" alt="">  360KB</td> -->
+                <td><a href="{% include drive_url.html path='/BL/bl14b2/xafs/FXspect1_33.exe' %}" class="ls"><img class="pdf" src="xafs/image/download.gif"
+
+                      alt=""> 312KB</a><br>
+                  file name: FXspect1_33.exe</td>
+              </tr>
+              <tr>
+                <td colspan="1" rowspan="2"> XAFSデータ変換プログラム<br>
+                  　（LZH形式圧縮ファイル）<br>
+                  　<font color="#990000">Ver.3.0 (2013.12.26)</font></td>
+                <!-- <td class="a"><a href="{% include drive_url.html path='/BL/bl14b2/xafs/XAFS_DataConverter_Ver.3.0.lzh' %}"><img class="pdf" src="xafs/image/download.gif" alt="">  3.64MB</a></td> -->
+                <td><img class="pdf" src="xafs/image/readme.gif" alt=""> <a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/XAFS_Data_Converter_171130.pdf' %}">※
+                    はじめに必ずお読みください</a><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="pdf"
+
+                    src="../image/pdf_file.gif" alt=""> <a href="{% include drive_url.html path='/BL/bl14b2/xafs/manual/XAFS_Data_Converter_171130.pdf' %}">1.28MB</a></td>
+              </tr>
+              <tr>
+                <td><font class="accent">※MS Office 2010対応バージョン</font><br>
+                  <a href="{% include drive_url.html path='/BL/bl14b2/xafs/XAFS_DataConverter_Ver.3.0.lzh' %}" class="ls"><img
+
+                      class="pdf" src="xafs/image/download.gif" alt=""> 3.64MB</a><br>
+                  file name: XAFS_DataConverter_Ver.3.0.lzh</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
+          <span style="color: black;"><a name="20090529"></a> <img src="xafs/image/icon3.gif"
+
+              alt="" style="width: 6px; height: 9px;"> <b>リンク集</b></span><br>
+          <p> <a href="https://spring8.jp/" target="_blank" rel="noopener" class="ls">SPring-8
+              Home</a><br>
+            <a href="http://user.spring8.or.jp/" target="_blank" rel="noopener"
+
+              class="ls">User Information</a><br>
+            <a href="http://bl01b1.spring8.or.jp/" target="_blank" rel="noopener"
+
+              class="ls">SPring-8 BL01B1ホームページ</a><br>
+            <a href="http://bl28xafs.spring8.or.jp/" target="_blank" rel="noopener"
+
+              class="ls">SPring-8 BL28B2ホームページ</a><br>
+            <a href="https://www.jxafs.org/" target="_blank" rel="noopener" class="ls">The
+              Japanese XAFS Society 日本XAFS研究会</a><br>
+            <a href="http://pfxafs.kek.jp/" target="_blank" rel="noopener" class="ls">Photon
+              Factory XAFSホームページ</a><br>
+            <a href="https://www.aichisr.jp/userguide/beamline_lists/BL5S1.html"
+
+              target="_blank" rel="noopener" class="ls">あいちシンクロトロン光センター BL5S1</a><br>
+            <a href="https://xrayabsorption.org/" target="_blank" rel="noopener"
+
+              class="ls">IXAS: The International X-ray Absorption Society</a><br>
+            <a href="https://mdr.nims.go.jp/" target="_blank" rel="noopener" class="ls">NIMS
+              Materials Data Repository (MDR)</a><br>
+          </p>
+          <div class="icon"><span style="color: black;">過去の（共同利用）研究課題／研究報告 </span></div>
+          <p><span style="color: black;"> 現在ご案内できる研究課題／研究報告はありません。<br>
+            </span> </p>
+          <span style="color: black;"> <br>
+            <img src="../image/icon2.gif" alt=""> <b>ビームライン担当者・連絡先</b> <br>
+          </span>
+          <p><span style="color: black;"> （注）e-mailアドレスは＠マーク以下を省略していますので<br>
+              アカウントの後に@spring8.or.jpを付けてください。<br>
+            </span> <span style="color: black;"><br>
+              大渕 博宣<br>
+              公益財団法人 高輝度光科学研究センター（JASRI）<br>
+              〒679-5198　兵庫県佐用郡佐用町光都1丁目1-1<br>
+              Phone : 0791-58-0924<br>
+              FAX : 0791-58-0830<br>
+              e-mail : ofuchi </span></p>
+          <br>
+          <!-- --></div>
+        <!-- right 終わり --></div>
+      <!-- main 終わり -->
+      <div id="footer"> <span style="color: black;">|　<a href="{% include link.html path='/new/index.html' %}"
+
+            class="foot">HOME</a>　 |　<a href="{% include link.html path='/new/copyright-policy.html' %}" class="foot">著
+            作権の帰属について</a>　 |　<a href="{% include link.html path='/new/inquiries.html' %}" class="foot">お問い
+            合わせ</a> |　<a href="#top" class="foot">ページトップへ</a>　| </span>
+        <div id="footer_lower">
+          <h3><span style="color: black;">Copyright(C)2009 JASRI All Rights
+              Reserved.</span></h3>
+        </div>
+      </div>
+      <!-- footer 終わり --> </div>
+    <font color="#990000">
+      <!-- container 終わり --> <br>
+    </font>
+  </body>
+</html>

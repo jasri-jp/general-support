@@ -1,0 +1,180 @@
+---
+layout: top
+nav: home
+title: JASRI 産学総合支援室
+description: SPring-8の産業利用を支援するページです。産業利用報告会などのイベント情報も掲載
+keywords: 先端大型研究施設,放射光,高輝度,X線,ビームライン,産業利用,SPring-8,スプリング8,高輝度光科学研究センター,JASRI,産業利用報告会
+# トップのお知らせ（1行）。不要なときは空にする。
+notice:
+  title: お知らせ：2026年度 第23回 SPring-8産業利用報告会(9/17-18)に多数ご参加いただきありがとうございました。
+  url: https://www.jasri.jp/business/keihatsu/event/2026/260917.html
+---
+<div class="cover-text">
+  産業分野のみなさまのホームページ<br>
+  <p class= "d-none d-sm-block">For Industrial Users</p>
+</div>
+
+<!-- carousel -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img class="d-sm-none w-100" src="{{ '/assets/images/top-image1nw01.jpg' | relative_url }}" alt="産学総合支援室">
+     <img class="d-none d-sm-block w-100" src="{{ '/assets/images/top-image1n.jpg' | relative_url }}" alt="産学総合支援室">
+   </div>
+    <div class="carousel-item">
+      <img class="d-sm-none w-100" src="{{ '/assets/images/top-image2nw01.png' | relative_url }}" alt="産学総合支援室">
+     <img class="d-none d-sm-block w-100" src="{{ '/assets/images/top-image2n.png' | relative_url }}" alt="産学総合支援室">
+   </div>
+    <div class="carousel-item">
+      <img class="d-sm-none w-100" src="{{ '/assets/images/top-image3nw01.jpg' | relative_url }}" alt="産学総合支援室">
+      <img class="d-none d-sm-block w-100" src="{{ '/assets/images/top-image3n.jpg' | relative_url }}" alt="産学総合支援室">
+     </div>
+  </div>
+</div>
+
+<!-- Start page content -->
+<div class="container">
+  <div class="row my-4 my-lg-5">
+
+    <!-- column -->
+       <div class="col-12 col-lg-8 pe-lg-5">
+        <div class="row">
+          <!-- top notation -->
+          {%- if page.notice.title %}
+                <p>
+                <a href="{{ page.notice.url }}" class="second-text-color main-hover-color font-26 p-0 underline">{{ page.notice.title }}</a>
+              </p>
+          {%- endif %}
+
+           <!-- ようこそ -->
+            <div class="col-12 col-lg-12 wow fadeIn">
+              <h2 class="main-background-color text-white my-3 my-lg-3 p-3 font-18">当Webサイトにようこそ！</h2>
+              <p class="main-text-color font-15">
+                私たちは、特に企業の方を中心に、初めて放射光を利用する方でも気後れすることなく、産学官に広く開かれた先端大型研究施設である SPring-8 をご利用いただき、 高輝度放射光ならではの実験データが得られるよう積極的な利用支援を行うとともに、講習会や研究会 等 を通じてさらに優れた成果が生み出されるよう、利用促進・支援を進めています。
+              </p>
+
+            <div class="row">
+
+                <!-- content -->
+                 <div class="col-12 col-sm-6 mb-4 wow fadeIn">
+                  <i class="far fa-question-circle second-text-color fa-3x d-flex justify-content-center"></i>
+                     <h2 class="mt-3 mb-2 font-20 main-text text-center">全くの初心者だけれども・・・</h2>
+                     <p class="forth-text-color font-16 mb-2 px-4 text-center">
+                       まずは「 <a href="{% include link.html path='/inquiry.html' %}" class="second-text-color main-hover-color p-0 underline">お問い合わせ</a>」ください。
+                     </p>
+                     <p class="forth-text-color font-16 mx-sm-1 mb-2 px-3 border pe-0 pb-0">
+                     ご自身が抱える課題を第三者に相談することで、その課題がより具体化し、解決の糸口が見えることがあります。
+                     また、ご相談前に実施された検討内容についてスタッフとご相談いただくことで、放射光を有効にご利用いただく提案が可能となります。
+                     </p>
+                  </div>
+
+                <!-- content -->
+                <div class="col-12 col-sm-6 mb-4 wow fadeIn">
+                  <i class="far fa-lightbulb second-text-color fa-3x d-flex justify-content-center"></i>
+                  <h2 class="mt-3 mb-2 font-20 main-text text-center">興味がある</h2>
+                  <p class="forth-text-color font-16 mb-2 px-4 text-center">
+                   「<a href="{% include link.html path='/science.html' %}" class="second-text-color main-hover-color p-0 underline">どんなことがわかるの？</a>」をご覧ください。
+                  </p>
+                  <p class="forth-text-color font-16 mx-sm-1 mb-2 px-3 border pe-0 pb-0">
+                    ご自身が抱える課題にSPring-8がどのように役立ちそうかのヒントを得てください。産業界が抱える課題は多岐に亘りお互いに全く関係なさそうに見えますが、
+                    それぞれをブレイクダウンすると「〇〇周りの構造」を知ることが課題解決のカギ、といった シンプルな命題 に行きつくことも少なくありません。
+                  </p>
+               </div>
+
+                <!-- content -->
+                <div class="col-12 col-sm-6 mb-4 wow fadeIn">
+                  <i class="fas fa-user-cog second-text-color fa-3x d-flex justify-content-center"></i>
+                <h2 class="mt-3 mb-2 font-20 main-text-color text-center">つかってみたい</h2>
+                <p class="forth-text-color font-16 mb-2 px-4 text-center">
+                  「<a href="{% include link.html path='/general.html' %}" class="second-text-color main-hover-color p-0 underline">どんなことができるの？</a>」をご覧ください。
+                 </p>
+                 <p class="forth-text-color font-16 mx-sm-1 mb-2 px-3 border pe-0 pb-0">
+                  SPring-8で利用可能な実験技術とその特徴を説明しています。利用計画を検討する際の参考にしてください。分からないことは気軽にご相談ください。
+                </p>
+                </div>
+
+                <!-- content -->
+                <div class="col-12 col-sm-6 mb-4 wow fadeIn">
+                  <i class="fas fa-book second-text-color fa-3x d-flex justify-content-center"></i>
+                <h2 class="mt-3 mb-2 font-20 main-text text-center">いざ、利用！</h2>
+                <p class="forth-text-color font-16 mb-2 px-4 text-center">
+                  「<a href="{% include link.html path='/user-guide.html' %}" class="second-text-color main-hover-color p-0 underline">どうやって使うの？</a> 」をご覧ください。
+                </p>
+                <p class="forth-text-color font-16 mx-sm-1 mb-2 px-3 border pe-0 pb-0">
+                  SPring-8は、共同利用施設です。国内外を問わず産官学の多くの方が公平に利用できるよう、利用手順が定められています。緊急度や予算等に合わせて最適な利用手順をみつけてください。
+                </p>
+                </div>
+
+              </div><!-- end of row -->
+            </div><!-- end of ようこそ col-12 col-lg-12 -->
+
+            <!-- Latest News（_data/news.yml） -->
+            <div class="col-12 col-lg-12 wow fadeIn">
+              <h2 class="main-background-color text-white my-3 my-lg-3 p-3 font-18">Latest News</h2>
+              <div class="row">
+              {%- for item in site.data.news %}
+              {%- if item.url contains "://" %}{% assign href = item.url %}{% else %}{% capture href %}{% include link.html path=item.url %}{% endcapture %}{% endif %}
+
+              <!-- date -->
+              <div class="col-3 wow fadeIn">
+                <div class="forth-text-color font-16 ms-2 mb-2"> {{ item.date }} </div>
+              </div>
+              <!-- content -->
+              <div class="col-9 wow fadeIn font-16">
+                <a href="{{ href }}" class="second-text-color main-hover-color">{{ item.title }}</a>
+              </div>
+              {%- endfor %}
+
+              </div><!-- end of row -->
+            </div><!-- end of Latest News col-12 col-lg-12 -->
+
+        </div><!-- end of row -->
+        </div><!-- end of col-12 col-lg-8 -->
+
+
+    <!-- column -->
+       <div class="col-12 col-lg-4">
+
+    <div class="mt-4">
+      <h2 class="position-relative font-23 category-head main-text-color second-before ps-3 mb-4">Events</h2>
+      <ul class="nav cat-list forth-text-color second-hover-color-link">
+        <li><a href="{% include link.html path='/events.html#training' %}">研修会</a></li>
+        <li><a href="{% include link.html path='/events.html#lecture' %}">講習会</a></li>
+        <li><a href="{% include link.html path='/events.html#debrief' %}">報告会</a></li>
+        <li><a href="http://www.jasri.jp/iuss/research/#workshop" target="_blank" rel="noopener noreferrer">利用推進協議会　研究会</a></li>
+     </ul>
+      <hr>
+    </div>
+
+    <div class="mt-4">
+      <h2 class="position-relative top-0 start-0 font-23 semi-font category-head main-text-color second-before ps-3 mb-4">Proposals</h2>
+      <ul class="nav cat-list forth-text-color second-hover-color-link">
+        <li><a href="https://user.spring8.or.jp/?p=22799" target="_blank" rel="noopener noreferrer">現在募集中の利用研究課題</a></li>
+        <li><a href="{% include link.html path='/proposalinfo.html#measurement_service' %}" target="_blank" rel="noopener noreferrer">測定代行</a></li>
+        <li><a href="https://user.spring8.or.jp/?p=20117" target="_blank" rel="noopener noreferrer">利用研究課題申請書　下書きファイル</a></li>
+      </ul>
+      <hr>
+    </div>
+
+    <div class="mt-4">
+        <h2 class="position-relative font-23 category-head main-text-color second-before ps-3 mb-4">Links</h2>
+        <ul class="nav cat-list forth-text-color second-hover-color-link cat-tags">
+            <li class="y-1"><a href="https://spring8.jp/" target="_blank" rel="noopener noreferrer">SPring-8ホームページ</a></li>
+            <li class="y-1"><a href="https://www.jasri.jp/business/keihatsu/event/" target="_blank" rel="noopener noreferrer">SPring-8関連のイベント</a></li>
+           <li class="y-1"><a href="http://www.jasri.jp/iuss/" target="_blank" rel="noopener noreferrer">SPring-8利用推進協議会</a></li>
+            <li class="y-1"><a href="https://sites.google.com/jasri-service.jp/srn-concierge/%E3%83%9B%E3%83%BC%E3%83%A0" target="_blank" rel="noopener noreferrer">放射光・中性子横断利用concierge</a></li>
+          </ul>
+        <hr>
+    </div>
+
+       </div><!-- end of col-12 col-lg-4 -->
+
+  </div>  <!-- end of row -->
+</div><!-- end of container -->
+
+<!-- /End page content -->

@@ -1,0 +1,78 @@
+---
+layout: legacy
+title: BL46XU HAXPES 標準試料データベース
+sidebar: legacy/sidebar/haxpes.html
+# 現行ページは DOCTYPE が無く互換モードで表示されているため、見た目を合わせて DOCTYPE を出さない
+doctype: none
+---
+          <!--------------------------------------------------------->
+          <div id="path"><a href="{% include link.html path='/new/index.html' %}" class="ls">HOME</a>　＞　<a
+
+              href="{% include link.html path='/BL/bl46xu/index.html' %}" class="ls">BL46XU</a>　＞　<a href="{% include link.html path='/BL/bl46xu/haxpes.html' %}"
+
+              class="ls">HAXPES</a>　＞ BL46XU HAXPES 標準試料データベース</div>
+          <div class="bar">BL46XU HAXPES 標準試料データベース</div>
+          <div class="icon"><a name="outline"></a>利用にあたって</div>
+          「BL46XU HAXPES 標準試料データベース」はBL46XUのHAXPES装置(VG-SCIENTA R4000アナライザー)により測定した HAXPESスペクトルをPdfファイルにてご覧頂けるデータベースです。<br>
+          HAXPES実験の事前検討(測定条件、サンプル構造)やデータ解釈などにお役立てください。<br>
+          現在は金属を中心としたデータのみとなっておりますが、他の金属元素、材料についても測定を行って順次公開していく予定です。 <br>
+          <br>
+          [測定条件]<br>
+          ・Analyzer : VG-SCIENTA R4000-10keV<br>
+          ・X-ray energy ： 7.94 keV (Undulator BL with Si(111) double crystal and Si (444) channel cut monochromator)<br>
+          ・Slit size : 0.5mm×25mm curved<br>
+          ・Pass energy : 200 eV (Constant Analayzer Energy)<br>
+          ・Angle between X-ray axis and analyzer axis : 90°<br>
+          ・Angle of X-ray incidence : 10°(Relative to sample surface)<br>
+          ・Take off angle : 80°(Relative to sample surface)<br>
+          ・Temperature : RT<br>
+          <br>
+          [収録内容]<br>
+          ・Surveyスペクトル<br>
+          ・内殻準位スペクトル<br>
+          ・価電子帯スペクトル<br>
+          <br>
+          ※当データベースは無償提供させて頂いておりますが、下記「ウェブサイト上のコンテンツに関する著作権の帰属にある注意事項」の内容をよくご理解の上ご使用ください。<br>
+          ※当データベースの使用により使用者が被ったいかなる損害、トラブルに関して、益財団法人 高輝度光科学研究センターでは一切の責任を負いかねますので予めご了承ください。<br>
+          <div class="icon"><a name="new"></a>更新履歴</div>
+          <font color="#990000">Last Update 2016/03/07</font>
+          <p> ・<font color="#990000"> 2016/03/07　</font>HAXPESデータベースに9種の登録準備<br>
+            ・<font color="#990000"> 2016/03/03　</font>HAXPESデータベースにAlを登録<br>
+            ・<font color="#990000"> 2016/03/03　</font>HAXPESデータベースページの作成作業を開始<br>
+          </p>
+          <br>
+          <div class="icon"><a name="database"></a>BL46XU　HAXPES　標準試料データベース</div>
+          <!-- <p> -->
+          <!-- <div class="bar">データベース</div> -->
+          <table>
+            <tbody>
+              {%- comment -%} 試料の一覧は _data/haxpes_samples.yml で管理する {%- endcomment -%}
+              {%- for s in site.data.haxpes_samples %}
+              <tr>
+              {%- if s.pdf %}
+                {%- capture pdf_url %}{% include drive_url.html path=s.pdf %}{% endcapture %}
+                <td> <a href="{{ pdf_url }}" target="_blank">{{ s.name }}</a> </td>
+                <td> <a href="{{ pdf_url }}" target="_blank"><img
+                      src="46haxpesdatabase/{{ s.icon }}"></a> </td>
+              {%- else %}
+                <td>{{ s.name }}</td>
+                <td> <a><img src="46haxpesdatabase/{{ s.icon }}"></a> </td>
+              {%- endif %}
+              </tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+          <p></p>
+          <br>
+          <div class="icon"> <a name="staff"></a>装置担当者・連絡先 </div>
+          <div class="contact"> （注）e-mailアドレスは＠マーク以下を省略していますので、<br>
+            アカウントの後に@spring8.or.jpを付けてください。 <br>
+            <br>
+            安野 聡<br>
+            （財）高輝度光科学研究センター(JASRI)<br>
+            〒679-5198　兵庫県佐用郡佐用町光都1丁目1-1<br>
+            Phone : 0791-58-0832 <br>
+            FAX : 0791-58-0830<br>
+            e-mail : yasuno </div>
+          <br>
+          <br>

@@ -1,0 +1,306 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<html xmlns:t="urn:schemas-microsoft-com:time" lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="Keywords" content="先端大型研究施設,放射光,高輝度,ビームライン,産業利用,BL19B2,BL14B2,BL46XU,XAFS,イメージング,多軸回析計,x線反射率,大型デバイシェラーカメラ,光源,XAFS,金属薄膜,8軸回析計,固体酸化物型燃料電池,粉末回折,結晶構造解析,産業,SPring-8,スプリング8,高輝度光科学研究センター,JASRI,文部科学省">
+    <meta name="Description" content="SPring-8 産業利用推進室は高輝度放射光を産業活用に利用していただくためのご支援をいたします">
+    <title>SPring-8産業利用推進室 BL14B2</title>
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/print.css" rel="stylesheet" type="text/css" media="print">
+    <style type="text/css">
+  <!--
+
+#contents {
+	line-height: 1.7em;
+	}
+
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+	a:link.un {color:#ffffff; text-decoration:none;}
+	a:visited.un {color:#ffffff; text-decoration:none;}
+	a:hover.un {color:ffffff; text-decoration:none;}
+	a:active.un {color:#ffffff; text-decoration:none;}
+
+
+/*左メニュー*/
+#navBar{
+	margin-top: 50px;
+	padding-left: 1px;
+	padding-bottom: 8px;
+	float: left;
+	}
+
+#navBar p.title{
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #333333;
+	padding: 5px 0 2px 0;
+	margin: 0 0 1px 0;
+	border-width: 2px 0 0 0;
+	}
+
+#navBar ul{
+	background-color: #663300;
+	list-style-type: none;
+	margin-bottom: 20px;
+	padding: 0 0 1px 0;
+ 	}
+#navBar ul li{
+	width: 140px;
+	margin: 0px 1px 0px 1px;
+	border: solid #663300;
+	border-width: 1px 0 0 0;
+	}
+
+#navBar ul li a{
+	width: 140px;
+	color: #333333;
+	display: block;
+	text-decoration: none;
+	vertical-align: top;
+	line-height: 23px;
+	background-color: #FFFFFF;
+	text-indent: 6px;
+	}
+#navBar ul li a:hover{
+	background-color:#FED0E0;
+	}
+
+table.a {
+	color: #333333;
+	margin-top: 5px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	font-size: 1.0em;
+	}
+
+table.b {
+	font-size: 1.0em;
+	line-height: 15px;
+	}
+
+table.c {
+	font-size: 87%;
+	border-style:none;
+	}
+
+td.a {
+	border: 1px #888888 solid;
+	padding: 3px 10px; 
+	line-height: 20px;
+	}
+
+td.b {
+	border-width: 0 0 0 0;
+	padding: 3px 10px; 
+	line-height: 15px;
+	}
+
+td a {
+
+	}
+
+.pdf {
+	border: 0;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+	vertical-align:middle;
+}
+
+p	{
+	padding: 0;
+	margin: 5px 0px 15px 25px;
+	}
+
+.box {
+	padding: 0;
+	margin: 5px 20px 15px 0px;
+	}
+
+.accent{
+	color: #dc143c;
+	font-weight: bold;
+	}
+
+/* コンテンツバー */
+.bar02 {
+	background-image: url(xafs/image/spring_note_husen.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 5px 0px 15px -10px;
+	padding-left: 28px;
+	font-size: 98%;
+	font-weight: bold;
+	}
+
+<!--------------------------------------------------------->
+/*基本設定*/
+body{
+	font-size: 13px;
+	*font-size: small;
+	text-align: center;
+	color: #333333;
+	margin: 0px;
+	}
+
+/*ヘッダー*/
+#head{
+	margin: 3px 0px 0px 0px;
+	}
+
+/* 上部メニューバー */
+#menu{
+	font-size: 14px;
+	}
+
+/*メイン（左メニュー含む）*/
+#main{
+	font-size: 13px;
+	}
+
+/*ライトコンテンツ*/
+#right{
+	line-height: 1.5;
+	}
+
+/*フッター*/
+#footer{
+	font-size: 13px;
+	}
+
+#footer_lower{
+	margin: 5px 0px 0px 0px;
+	}
+
+<!--------------------------------------------------------->
+
+  -->
+  </style>
+  </head>
+  <body onload="setInterval('sc_tbl()',1500);"> <a name="top"></a>
+    <div id="container">
+      <!--------------------------------------------------------->
+      <div id="head"> <img src="../image/header.jpg" alt="ヘッダー"> </div>
+      <!-- menu 終わり -->
+      <script language="JavaScript">
+var tY=0;fY=0;sP=0;
+function sc_tbl(){
+tY=sP;
+tt1.from=fY;
+tt1.to=tY;
+tt1.beginElement()
+fY=tY;
+}
+function scPt(){
+sP=document.body.scrollTop;
+}
+document.onmousemove = scPt;
+onscroll=scPt;
+</script><!--?IMPORT namespace="t" implementation="#default#time2"-->
+      <div id="main">
+        <!--------------------------------------------------------->
+        <!---
+<div id="left_menu">--->
+        <div id="navBar">
+          <!---
+<DIV style="position:relative;width:150;background-color:white;padding:5;border:2 outset;" align="left"><DIV style="position:relative;background-color:snow;">--->
+          <div style="position:relative;background-color:white;">
+            <p class="title">BL46XU 多軸回折</p>
+            <ul>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="#outline">概要</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="#system">制御システム</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="#environment">データ解析環境</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="#staff">装置担当者・連絡先</a> </li>
+            </ul>
+            <t:animate id="tt1" attributename="top" begin="indefinite" from=""
+
+              to="" dur="1" autoreverse="false" fill="freeze" decelerate="1"> </t:animate></div>
+        </div>
+        <!-- left_menu 終わり -->
+        <!--------------------------------------------------------->
+        <div id="right">
+          <!--------------------------------------------------------->
+          <div id="path"><a href="../../new/index.html" class="ls">HOME</a>　＞　<a
+
+              href="index.html" class="ls">BL46XU</a>　＞　多軸回折</div>
+          <div id="main">
+            <!--------------------------------------------------------->
+            <div class="bar">多軸回折 (BL46XU)</div>
+            <div class="icon"><a name="outline"></a>概要</div>
+            <table width="500">
+              <tbody>
+                <tr>
+                  <td><img src="./image/bl46xu_huber1.jpg"></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <p> 　BL46XUの多軸回折計は実験ハッチ内上流側に設置されている。基本的にはアナライザー結晶用２軸ゴニオ付きの４circleゴニオで， ω軸（結晶角），２θ軸（回折角）がそれぞれ垂直回転と水平回転の２組装備されているHuber製の８軸回折計である。 χクレードルはC型の物を採用している。X線検出器はNaIシンチレーションカウンター（0次元検出器）を標準使用しているが、 オプションとして2次元ピクセル検出器PILATUSも利用可能である。<br>
+              　現在，当装置の主なターゲットは，微小角入射Ｘ線回折およびＸ線反射率測定による薄膜又は表面の構造解析， 時分割in-situX線回折である。<br>
+              詳細については <a href="http://www.spring8.or.jp/wkg/BL46XU/instrument/lang/INS-0000001477"
+
+                target="_blank"> こちら（JASRI公式ページ）</a> を参照下さい。 </p>
+            <br>
+            <img src="../bl19b2/huber19/image/top02.gif">
+            <div class="list">
+              <!-- -------------------------------------------------------- --> <img
+
+                class="pdf" src="../bl19b2/huber19/image/kuru3_1.gif"><a
+
+                href="{% include link.html path='/BL/bl19b2/huber19/huber.html' %}">HUBER社製多軸回折計</a><br>
+              <img class="pdf" src="../bl19b2/huber19/image/kuru3_2.gif"><a
+
+                href="{% include link.html path='/BL/bl19b2/huber19/accessary_stage.html' %}">周辺装置（試料ステージ・X線入射部・X線検出部など）</a><br>
+              <img class="pdf" src="../bl19b2/huber19/image/kuru3_3.gif"><a
+
+                href="{% include link.html path='/BL/bl19b2/huber19/link.html' %}">お役立ちリンク</a><br>
+              <!-- -------------------------------------------------------- --> </div>
+            <br>
+            <div class="icon"><a name="system"></a>制御システム</div>
+            <p> 回折計制御ソフト：　SPEC（<a href="http://www.certif.com/" target="_blank">CSS社</a>製）<br>
+              <a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/basic_cmd.html' %}" target="_blank">スペックコマンドリスト</a> </p>
+            <br>
+            <div class="icon"><a name="environment"></a>データ解析環境</div>
+            <p> プラットフォーム　：　Windows2000<br>
+              解析ソフト　：　EXCEL、 IGOR、 ImageJ、 RIGAKU製反射率解析ソフトGXRR<br>
+              通信ソフト（回折計制御コンピュータとの通信用)　：　Tera Term Pro<br>
+              <a href="{% include link.html path='/BL/bl19b2/huber19/huber_logplot.html' %}">LogPlot(SPECデータ整理用ソフト) </a> </p>
+            <br>
+            <div class="icon"> <a name="staff"></a>装置担当者・連絡先 </div>
+            <div class="contact"> （注）e-mailアドレスは＠マーク以下を省略していますので、<br>
+              アカウントの後に@spring8.or.jpを付けてください。 <br>
+              <br>
+              小金澤 智之<br>
+              （財）高輝度光科学研究センター(JASRI)<br>
+              〒679-5198　兵庫県佐用郡佐用町光都1丁目1-1<br>
+              Phone : 0791-58-0832 <br>
+              PHS: 3377 <br>
+              FAX : 0791-58-0830<br>
+              e-mail : koganeza<br>
+              <br>
+            </div>
+            <br>
+            <!---------------------------------------------------------> </div>
+          <!-- right 終わり --> </div>
+        <!-- main 終わり -->
+        <!--------------------------------------------------------->
+        <!------ container 終わり ------> <br>
+      </div>
+    </div>
+  </body>
+</html>

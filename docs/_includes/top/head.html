@@ -1,0 +1,46 @@
+    <!-- 文字コード・画面表示の設定 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+
+    <!-- animate.css-->
+    <link href="{{ '/assets/vendor/animate.css-master/animate.min.css' | relative_url }}" rel="stylesheet">
+    <!-- Load Screen -->
+    <link href="{{ '/assets/vendor/loadscreen/css/spinkit.css' | relative_url }}" rel="stylesheet">
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    {%- if page.fontawesome == "local" %}
+    <!-- Font Awesome 5 -->
+    <link href="{{ '/assets/vendor/fontawesome/css/fontawesome-all.min.css' | relative_url }}" rel="stylesheet">
+    {%- else %}
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3137abad22.js" crossorigin="anonymous"></script>
+    {%- endif %}
+    <!-- Bootstrap CSS -->
+    <link href="{{ '/assets/vendor/bootstrap/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+    <!-- portfolio filter gallery -->
+    <link href="{{ '/assets/vendor/portfolio-filter-gallery/portfolio-filter-gallery.css' | relative_url }}" rel="stylesheet">
+    <!-- FANCY BOX -->
+    <link href="{{ '/assets/vendor/fancybox-master/jquery.fancybox.min.css' | relative_url }}" rel="stylesheet">
+    <!-- RANGE SLIDER -->
+    <link href="{{ '/assets/vendor/range-slider/range-slider.css' | relative_url }}" rel="stylesheet">
+    <!-- OWL CAROUSEL  -->
+    <link href="{{ '/assets/vendor/owlcarousel/owl.carousel.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/vendor/owlcarousel/owl.theme.default.min.css' | relative_url }}" rel="stylesheet">
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- My CSSの読み込み-->
+    <link rel="stylesheet" href="{{ '/assets/css/stylesheet.css' | relative_url }}">
+
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {%- if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+    {%- endif %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="article">

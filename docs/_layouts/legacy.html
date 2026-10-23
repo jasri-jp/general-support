@@ -1,0 +1,44 @@
+{%- comment -%}
+  旧デザイン（BL系ページ）のレイアウト。現行の header3.php 等の include を置き換えたもの。
+  front matter:
+    title   : ページタイトル
+    lang    : ja / en（既定 ja）
+    sidebar : 左メニューの include ファイル（例: legacy/sidebar/xafs-ja.html）
+    footer  : ja / en / なし（既定なし）
+    doctype : none にすると DOCTYPE を出さない（現行で DOCTYPE が無く互換モード表示のページ用）
+{%- endcomment -%}
+{%- if page.doctype != "none" -%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% endif -%}
+<html lang="{{ page.lang | default: 'ja' }}">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link href="{{ '/BL/css/main.css' | relative_url }}" rel="stylesheet" type="text/css">
+    <link href="{{ '/BL/css/main.css' | relative_url }}" rel="stylesheet" type="text/css" media="print">
+{% include legacy/style.html %}
+  </head>
+  <body>
+    <a name="top"></a>
+    <div id="container">
+      <div id="head"> <img src="{{ '/BL/image/header.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}header{% else %}ヘッダー{% endif %}"> </div>
+      <div id="main">
+        <div id="navBar">
+          <div style="position:relative;background-color:white;">
+{% include {{ page.sidebar }} %}
+          </div>
+        </div>
+        <!-- left_menu 終わり -->
+        <div id="right">
+{{ content }}
+        </div>
+        <!-- right 終わり -->
+      </div>
+      <!-- main 終わり -->
+    </div>
+{%- if page.footer %}
+{% include legacy/footer-{{ page.footer }}.html %}
+{%- endif %}
+  </body>
+</html>

@@ -1,0 +1,27 @@
+# BL46XU HAXPES 標準試料データベースの一覧（表示順）
+#   name: 試料名
+#   icon: 46haxpesdatabase/ 内のアイコン画像
+#   pdf : スペクトルPDFの現行パス（_data/drive.yml のキー）（PDFが無い試料は書かない）
+- name: Ag metal
+  icon: Ag_icon.png
+- name: Al metal
+  icon: Al_icon.png
+  pdf: /BL/bl46xu/haxpes/46haxpesdatabase/Al_metal.pdf
+- name: Au metal
+  icon: Au_icon.png
+- name: Cu metal
+  icon: Cu_icon.png
+- name: Fe metal
+  icon: Fe_icon.png
+- name: Ge
+  icon: Ge_icon.png
+- name: In metal
+  icon: In_icon.png
+- name: Mn metal
+  icon: Mn_icon.png
+- name: Ni metal
+  icon: Ni_icon.png
+- name: Si
+  icon: Si_icon.png
+- name: Zn metal
+  icon: Zn_icon.png

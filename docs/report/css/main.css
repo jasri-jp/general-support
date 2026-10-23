@@ -1,0 +1,346 @@
+
+/*基本設定*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	}
+
+a:link {color:#0000ff;}
+a:visited {color:#0000ff;}
+a:hover {color:#DC143C;}
+a:active {color:#0000ff;}
+
+body{
+	font-size: 13px;
+	text-align: center;
+	color: #333333;
+	margin: 0px;
+	}
+
+p{
+	margin-left: 10px;
+	}
+
+hr{
+	margin-bottom: 5px;
+	}
+
+select{
+	margin: 7px 0;
+	}
+
+/*テーブル*/
+table{
+	color: #333333;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 100%;
+	}
+th{
+	background-color: #fffacd;
+	padding: 3px 10px;
+	border: 1px #888888 solid;
+	font-weight: normal;
+	}
+td{
+	border: 1px #888888 solid;
+	padding: 3px 10px;
+	line-height: 20px;
+	}
+td a{
+	text-decoration: none;
+	}
+
+/*一番大外のレイアウト用ボックス*/
+#container{
+	width: 800px;
+	margin: auto;
+	text-align: left;
+	}
+
+/*ヘッダー*/
+#head{
+	height: 78px;
+	border-top: 1px solid #888888;
+	background-image: url(../image/head_back.jpg);
+	background-repeat: repeat-x;
+	margin: 3px 0 0 0;
+	padding: 0px;
+	}
+
+
+/* 上部メニューバー */
+#menu{
+	width: 796px;
+	height: 28px;
+	font-size: 14px;
+	background:url(../image/head_menu.gif) no-repeat;
+	}
+#menu ul{
+	list-style-type: none;
+	border-top: 1px #808080 solid;
+	}
+#menu li{
+	float: left;
+	text-align: center;
+	}
+
+#menu ul li{
+	float: left;
+	width: 159px;
+	height: 28px;
+	position: relative;
+	}
+
+#menu ul li a{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+	width: 159px;
+	line-height: 26px;
+	text-align: center;
+	}
+#menu ul li a:hover{
+	color: #000000;
+	background: #FED0E0;
+	padding: 0;
+	}
+
+#menu ul li.off{
+	color: #ffffff;
+	overflow: hidden;
+	width: 159px;
+	line-height: 28px;
+	}
+
+#menu ul ol.sub{
+	position: absolute;
+	left: 0px;
+	top: 28px;
+	width: 159px;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #808080;
+	text-align: center;
+	list-style-type: none;
+	}
+
+#menu ul li.on{
+	color: #ffffff;
+	width: 159px;
+	line-height: 28px;
+	}
+
+#menu ul ol.sub li{
+	float: none;
+	width: 159px;
+	line-height: 28px;
+	border-bottom: 1px solid #808080;
+	text-align: center;
+	float: none;
+	}
+
+#menu ul ol.sub li a:link{ /* 通常リンク */
+	line-height: 28px;
+	background: #FED0E0;
+	color: #333333;
+	}
+#menu ul ol.sub li a:visited{ /* 訪問済み */
+	line-height: 28px;
+	background: #FED0E0;
+	color: #333333;
+	}
+#menu ul ol.sub li a:hover{ /* マウスオーバー */
+	line-height: 28px;
+	background: #FDF5E6;
+	color: #333333;
+	}
+
+
+/*メイン（左メニュー含む）*/
+#main{
+	height: 10%; /*×*/
+	}
+
+#main ol{
+	margin-left: 30px;
+	}
+
+/*左メニュー*/
+.title{
+	color: #000000;
+	margin: 10px 10px 0px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	}
+
+#left_menu{
+	margin-top: 20px;
+	padding-left: 1px;
+	padding-bottom: 8px;
+	float: left;
+	}
+
+#left_menu p.title{
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #333333;
+	padding: 5px 0 2px 0;
+	margin: 0 0 1px 0;
+	border-width: 2px 0 0 0;
+	}
+
+#left_menu ul{
+	background-color: #663300;
+	list-style-type: none;
+	margin-bottom: 20px;
+	padding: 0 0 1px 0;
+ 	}
+#left_menu ul li{
+	width: 150px;
+	margin: 0px 1px 0px 1px;
+	border: solid #663300;
+	border-width: 1px 0 0 0;
+	}
+
+#left_menu ul li a{
+	width: 150px;
+	color: #333333;
+	display: block;
+	text-decoration: none;
+	vertical-align: top;
+	line-height: 23px;
+	background-color: #FFFFFF;
+	text-indent: 6px;
+	}
+#left_menu ul li a:hover{
+	background-color:#FED0E0;
+	}
+
+/*左メニューない場合のレイアウト用*/
+#makeup{
+	float: left;
+	margin: 15px 10px 10px 10px;
+	padding-right: 10px;
+	font-size: 116%;
+	line-height: 145%;
+	}
+
+/*左メニューない場合のレイアウト且つテーブル枠線なし*/
+#invisible{
+	float: left;
+	margin: 15px 10px 10px 10px;
+	padding-right: 10px;
+	font-size: 116%;
+	line-height: 145%;
+	}
+#invisible table{
+	border: none;
+	}
+#invisible td{
+	border: none;
+	}
+
+/*階層表示*/
+#path{
+	font-size: 83%;
+	color: #ff6600;
+	}
+
+/*ライトコンテンツ*/
+#right{
+	float: left;
+	margin-top: 15px;
+	width: 76%;
+	margin-left: 30px;
+	font-size: 116%;
+	line-height: 145%;
+	}
+
+/*フッター*/
+#footer{
+	clear: both;
+	padding-top: 30px;
+	font-size: 13px;
+	text-align: center;
+	}
+
+a:link.foot {color:#333333; text-decoration:none;}
+a:visited.foot {color:#333333; text-decoration:none;}
+a:hover.foot {color:#DC143C; text-decoration:underline;}
+a:active.foot {color:#333333; text-decoration:none;}
+
+#footer_lower{
+	text-align: right;
+	margin-top: 5px;
+	border-top: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+	background: url(../image/foot_bg.jpg) repeat bottom;
+	height: 30px;
+	}
+#footer_lower h3{
+	font-size: 13px;
+	font-weight: normal;
+	padding-top: 12px;
+	padding-right: 30px;
+	text-align: right;
+	}
+
+
+/*共通class*/
+.nobar{
+	margin: 0px 10px 15px 5px;
+	padding: 5px;
+	border-bottom: 1px solid #333333;
+	font-size: 110%;
+	font-weight: bold;
+	}
+
+.bar{
+	background-position: left;
+	background-image: url(../image/titlebar.gif);
+	background-repeat: no-repeat;
+	margin: 5px 0px 15px 0px;
+	padding: 0 0 7px 25px;
+	font-size: 110%;
+	font-weight: bold;
+	}
+
+.icon{
+	background-image: url(../image/icon.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 15px 0px 5px 0px;
+	padding-left: 28px;
+	font-size: 98%;
+	font-weight: bold;
+	}
+
+.contact{
+	margin: 10px 0 0 20px;
+	}
+
+.pdf {
+	border: 0;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+	vertical-align:middle;
+	}
+
+.acro {
+	font-size: 83%;
+	margin-left: 20px;
+	}
+
+.box{
+	background: #E6E6FA;
+	margin: 5px 0 5px 10px;
+	padding: 3px 3px 3px 5px;
+	border: 1px #888888 solid;
+	}
+
+.sign{
+	text-align: right;
+	}

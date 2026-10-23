@@ -1,0 +1,16 @@
+{%- comment -%}
+  サイト内リンクのURLを出力する。使い方: {% include link.html path="/general.html#anchor" %}
+  このサイトにあるページ・ファイルならサイト内へ、まだ移行していないものは
+  site.legacy_url（現行サーバー）へリンクする。全ページ移行後は legacy_url を "" にする。
+{%- endcomment -%}
+{%- assign p = include.path -%}
+{%- assign base = p | split: "#" | first -%}
+{%- assign dir = base | replace: "/index.html", "/" -%}
+{%- assign hit = site.pages | where: "url", base | first -%}
+{%- unless hit -%}{%- assign hit = site.pages | where: "url", dir | first -%}{%- endunless -%}
+{%- unless hit -%}{%- assign hit = site.static_files | where: "path", base | first -%}{%- endunless -%}
+{%- if hit or site.legacy_url == "" -%}
+{{ p | relative_url }}
+{%- else -%}
+{{ site.legacy_url }}{{ p }}
+{%- endif -%}

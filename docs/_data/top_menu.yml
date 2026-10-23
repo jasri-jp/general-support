@@ -1,0 +1,19 @@
+# トップサイト上部のメニュー
+- id: home
+  title: HOME
+  path: /index.html
+- id: general
+  title: どんなことができるの？
+  path: /general.html
+- id: science
+  title: どんなことがわかるの？
+  path: /science.html
+- id: user-guide
+  title: どうやって使うの？
+  path: /user-guide.html
+- id: usageinfo
+  title: 利用に役立つ情報
+  path: /usageinfo.html
+- id: inquiry
+  title: お問い合わせ
+  path: /inquiry.html

@@ -1,0 +1,192 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script type="text/javascript" src="./java/browser.js"></script>
+
+<style Type="text/css">
+<!--
+#contents {
+	line-height: 1.7em;
+	}
+	
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+
+table {
+	color: #333333;
+	margin-top: 0px;
+	margin: 10px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+	
+table.b{
+    margin: 0px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+
+th.a{
+	background-color: #66FF66;
+	border: 1px #888888 solid;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
+	width: 100px;
+	}
+th.b{
+	border: 1px #888888 solid;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 0.8em;
+	}
+
+td{
+	border: 1px #888888 solid; 
+	line-height: 20px;
+	padding: 5px 0px 5px 10px;
+	line-height: 18px;
+	text-align: left;
+	}
+	
+
+-->
+</style>
+
+ </head>
+<body>
+
+
+<title>SPECコマンドリスト(BL19B2）</title>
+</head>
+<body id="bodyid">
+<a name="TopofPage"></a>
+<div id="page">
+<div id="page2">
+<div id="banner">
+<h1>SPECコマンドリスト(BL19B2）</h1>
+</div>
+
+<table class=b cellspacing="0" cellpadding="0" id="menu"><tr><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'" style="border-left-width:0">
+<a href="basic_cmd.html">回折計制御コマンド</span></a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="monochro_cmd.html">光源制御コマンド</a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="utility_cmd.html"><span style="color: #0066FF;">便利なコマンド </a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="make_cmd.html">コマンドを作ろう</a></td></tr></table>
+
+<div id="main">
+<table id="image" cellspacing="0" cellpadding="0"><tr><td valign="top">
+<h3></h3>
+</td></tr></table>
+<div id="left">
+<div id="sidemenu">
+<h2>サイドメニュー</h2>
+<ul>
+
+
+<h2>　　　　　</h2>
+<ul>
+<li>BL19B2多軸回折計トップに戻る</li>
+</ul>
+
+<!--
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+-->
+</ul>
+<!--
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+</ul>
+-->
+</div>
+</div>
+<div id="right">
+<h2>ここにタイトル</h2>
+<p>
+<!--ここに文章を書いてください。-->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">ちょっと便利なコマンド</big><br>
+<br>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意点</span>：<br>
+</div>
+<div style="margin-left: 40px;">１．BLWSをコントロールしているコマンドはCtrl-Cで中断させないこと。<br>
+<br>
+２．MBS,DSSのコントロールを含むコマンドは<span style="color: rgb(0, 0, 0);">PLCでMBS,DSSコン
+トロールを</span><span style="color: rgb(255, 0, 0); font-weight: bold;">　
+LOCAL ONLY　→　LOCAL＋REMOTE　</span><span style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);">に切り替えておくこと（１．④MBS,DSS遠隔操作コマンドの項を参照）</span></span>
+</div>
+<br>
+<span style="font-weight: bold;">チェックコマンド</span><br>
+
+
+
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+	  <td width=100>チェック項目</td>
+      <td width=120>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　／　アクション</td>
+    </tr>
+	<tr>
+      <td>ダークカウント</td>
+	  <td>自動チェック </td>
+	  <th class=a>chk_dark </th>
+	  <th class=b>[カウント時間(sec)]<br>自動的にDSSを閉めてダークをカウントする。終わったらDSSを元の状態に戻す</th>
+    </tr>
+	<tr>
+      <td>ビームダンプ</td>
+	  <td>メールでお知らせ </td>
+	  <th class=a>chk_bmdump</th>
+	  <th class=b>[メールアドレス]<br>／現在のリングカレントおよびMBSの状態をチェックし、もしビームがダンプしていたら引数のメールアドレスにビームダンプを知らせるメールを送る。</th>
+    </tr>
+</table>
+
+
+
+
+
+
+
+<!--
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+<h2>ここにタイトル</h2>
+<p>
+ここに文章を書いてください。
+</p>
+ -->
+
+
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+</div>
+<div id="copy">
+Copyright (C) 2005 (財)高輝度光科学研究センター　産業利用推進室 , All rights reserved.  
+</div>
+</div>
+</div>
+</div>
+<img src="img/menubg2.png" alt="omo" id="omo">
+</body>
+</html>

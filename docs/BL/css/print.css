@@ -1,0 +1,142 @@
+body {
+	color: #000;
+	font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3",sans-serif;
+	background-color: #FFFFFF;
+	}
+
+	a:link {color:blue;}
+	a:visited {color:blue;}
+	a:hover {color:blue;}
+	a:active {color:blue;}
+
+/* ヘッダー */
+#head {
+	height: 75px;
+	background-image: url(../image/head_back.jpg);
+	background-repeat: repeat-x;
+	left: 1em;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+	}
+
+
+/* 左側 LargeBox */
+#LargeLeft {
+	display: none;
+	}
+
+
+/* 左側ナビゲーションバー */
+#navBar {
+	display: none;
+	}
+
+#navBar a {
+	display: none;
+	}
+
+#navBar ul {
+	display: none;
+	}
+#navBar li {
+	display: none;
+	}
+
+/* 左側バナー1 */
+#bunnar1 {
+	display: none;
+	}
+
+/* 左側バナー2 */
+#bunnar2 {
+	display: none;
+	}
+
+#bunnar2 a {
+	display: none;
+	}
+
+#bunnar2 ul {
+	display: none;
+	}
+#bunnar2 li {
+	display: none;
+	}
+
+
+/* 右側 LargeBox */
+#LargeRight {
+	margin: 5px 0px 0px 0px;
+	padding: 0;
+	border: none;
+	}
+
+/* 現在地表示 */
+#Top {
+	margin: 0px 0px 12px 0px;
+	padding-left: 20px;
+	border-bottom: 1px solid #7FD57F;
+	font-size: 83%;
+	color: #ff6600;
+	}
+
+/* メインコンテンツ */
+#contents {
+	margin: 0px 0px 10px 3px;
+	padding-left: 30px;
+	border-left: none;
+	font-size: 88%;
+	}
+
+/* コンテンツバー */
+.bar {
+	height: 20px;
+	background-image: url(../image/bar.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 5px 0px 15px -10px;
+	padding-left: 28px;
+	font-size: 98%;
+	font-weight: bold;
+	}
+
+/* メニューリスト */
+.menu {
+	background-image: url(../image/icon.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 5px 0px 0px 10px;
+	padding-left: 28px;
+	font-size: 98%;
+	font-weight: bold;
+	}
+
+/* トップに戻る */
+.back {
+	vertical-align: middle;
+	}
+
+/* acrobat */
+.acro {
+	font-size: 83%;
+	margin-left: 20px;
+	}
+
+
+/* フッター */
+#foot {
+	display: none;
+	}
+
+#foot p {
+	color: #333333;
+	text-decoration: none;
+	text-align: right;
+	display: block;
+	margin: 0 0 1em 0;
+	padding: 0 1em 0 0;
+	border-style: none;
+	font-size: 70%;
+	line-height: 140%;
+	}

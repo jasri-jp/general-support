@@ -1,0 +1,30 @@
+---
+permalink: /404.html
+title: ページが見つかりません
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+{%- comment -%}
+  移行期間中（_config.yml の legacy_url が設定されている間）は、
+  まだ移行していないページへのアクセスを現行サーバーの同じパスへ転送する。
+  全ページ移行後に legacy_url を "" にすると、通常の「見つかりません」ページになる。
+{%- endcomment -%}
+{%- if site.legacy_url != "" %}
+<script>
+  (function () {
+    var base = {{ site.baseurl | jsonify }};
+    var path = location.pathname;
+    if (base && path.indexOf(base) === 0) { path = path.slice(base.length); }
+    location.replace({{ site.legacy_url | jsonify }} + path + location.search + location.hash);
+  })();
+</script>
+{%- endif %}
+</head>
+<body>
+<p>お探しのページは見つかりませんでした。</p>
+<p><a href="{{ '/' | relative_url }}">トップページへ</a></p>
+</body>
+</html>

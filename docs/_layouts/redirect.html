@@ -1,0 +1,18 @@
+{%- comment -%}
+  旧URLから新しいページへ転送するだけのページ。front matter の redirect_to に転送先（サイト内パス）を書く。
+{%- endcomment -%}
+{%- assign target = page.redirect_to | relative_url -%}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ページを移動しました</title>
+<link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ target }}">
+<meta name="robots" content="noindex">
+<script>location.replace({{ target | jsonify }} + location.hash);</script>
+</head>
+<body>
+<p>このページは移動しました。<a href="{{ target }}">{{ page.redirect_to | absolute_url }}</a></p>
+</body>
+</html>

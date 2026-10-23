@@ -1,0 +1,316 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<html xmlns:t="urn:schemas-microsoft-com:time" lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="Keywords" content="先端大型研究施設,放射光,高輝度,ビームライン,産業利用,BL19B2,BL14B2,BL46XU,XAFS,イメージング,多軸回析計,x線反射率,大型デバイシェラーカメラ,光源,XAFS,金属薄膜,8軸回析計,固体酸化物型燃料電池,粉末回折,結晶構造解析,産業,SPring-8,スプリング8,高輝度光科学研究センター,JASRI,文部科学省">
+    <meta name="Description" content="SPring-8 産業利用推進室は高輝度放射光を産業活用に利用していただくためのご支援をいたします">
+    <title>SPring-8産業利用推進室 BL46XU</title>
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/print.css" rel="stylesheet" type="text/css" media="print">
+    <style type="text/css">
+  <!--
+
+#contents {
+	line-height: 1.7em;
+	}
+
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+	a:link.un {color:#ffffff; text-decoration:none;}
+	a:visited.un {color:#ffffff; text-decoration:none;}
+	a:hover.un {color:ffffff; text-decoration:none;}
+	a:active.un {color:#ffffff; text-decoration:none;}
+
+
+/*左メニュー*/
+#navBar{
+	margin-top: 50px;
+	padding-left: 1px;
+	padding-bottom: 8px;
+	float: left;
+	}
+
+#navBar p.title{
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #333333;
+	padding: 5px 0 2px 0;
+	margin: 0 0 1px 0;
+	border-width: 2px 0 0 0;
+	}
+
+#navBar ul{
+	background-color: #663300;
+	list-style-type: none;
+	margin-bottom: 20px;
+	padding: 0 0 1px 0;
+ 	}
+#navBar ul li{
+	width: 140px;
+	margin: 0px 1px 0px 1px;
+	border: solid #663300;
+	border-width: 1px 0 0 0;
+	}
+
+#navBar ul li a{
+	width: 140px;
+	color: #333333;
+	display: block;
+	text-decoration: none;
+	vertical-align: top;
+	line-height: 23px;
+	background-color: #FFFFFF;
+	text-indent: 6px;
+	}
+#navBar ul li a:hover{
+	background-color:#FED0E0;
+	}
+
+table.a {
+	color: #333333;
+	margin-top: 5px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	font-size: 1.0em;
+	}
+
+table.b {
+	font-size: 1.0em;
+	line-height: 15px;
+	}
+
+table.c {
+	font-size: 87%;
+	border-style:none;
+	}
+
+td.a {
+	border: 1px #888888 solid;
+	padding: 3px 10px; 
+	line-height: 20px;
+	}
+
+td.b {
+	border-width: 0 0 0 0;
+	padding: 3px 10px; 
+	line-height: 15px;
+	}
+
+td a {
+
+	}
+
+.pdf {
+	border: 0;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+	vertical-align:middle;
+}
+
+p	{
+	padding: 0;
+	margin: 5px 0px 15px 25px;
+	}
+
+.box {
+	padding: 0;
+	margin: 5px 20px 15px 0px;
+	}
+
+.accent{
+	color: #dc143c;
+	font-weight: bold;
+	}
+
+/* コンテンツバー */
+.bar02 {
+	background-image: url(xafs/image/spring_note_husen.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 5px 0px 15px -10px;
+	padding-left: 28px;
+	font-size: 98%;
+	font-weight: bold;
+	}
+
+<!--------------------------------------------------------->
+/*基本設定*/
+body{
+	font-size: 13px;
+	*font-size: small;
+	text-align: center;
+	color: #333333;
+	margin: 0px;
+	}
+
+/*ヘッダー*/
+#head{
+	margin: 3px 0px 0px 0px;
+	}
+
+/* 上部メニューバー */
+#menu{
+	font-size: 14px;
+	}
+
+/*メイン（左メニュー含む）*/
+#main{
+	font-size: 13px;
+	}
+
+/*ライトコンテンツ*/
+#right{
+	line-height: 1.5;
+	}
+
+/*フッター*/
+#footer{
+	font-size: 13px;
+	}
+
+#footer_lower{
+	margin: 5px 0px 0px 0px;
+	}
+
+<!--------------------------------------------------------->
+
+  -->
+  </style>
+  </head>
+  <body onload="setInterval('sc_tbl()',1500);"> <a name="top"></a>
+    <div id="container">
+      <!--------------------------------------------------------->
+      <div id="head"> <img src="../image/header.jpg" alt="ヘッダー"> </div>
+      <!-- menu 終わり -->
+      <script language="JavaScript">
+var tY=0;fY=0;sP=0;
+function sc_tbl(){
+tY=sP;
+tt1.from=fY;
+tt1.to=tY;
+tt1.beginElement()
+fY=tY;
+}
+function scPt(){
+sP=document.body.scrollTop;
+}
+document.onmousemove = scPt;
+onscroll=scPt;
+</script><!--?IMPORT namespace="t" implementation="#default#time2"-->
+      <div id="main">
+        <!--------------------------------------------------------->
+        <!---
+<div id="left_menu">--->
+        <div id="navBar">
+          <!---
+<DIV style="position:relative;width:150;background-color:white;padding:5;border:2 outset;" align="left"><DIV style="position:relative;background-color:snow;">--->
+          <div style="position:relative;background-color:white;">
+            <p class="title">BL46XU</p>
+            <ul>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="{% include link.html path='/BL/bl46xu/huber46.html' %}">多軸回折</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="http://www.spring8.or.jp/wkg/BL46XU/instrument/lang/INS-0000001476">ATXG</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="haxpes.html">光電子分光</a> </li>
+            </ul>
+            <ul>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="#outline">概要</a> </li>
+              <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+
+                onclick="clk(this.innerHTML)"> <a href="#staff">担当者・連絡先</a> </li>
+            </ul>
+            <t:animate id="tt1" attributename="top" begin="indefinite" from=""
+
+              to="" dur="1" autoreverse="false" fill="freeze" decelerate="1"> </t:animate></div>
+        </div>
+        <!-- left_menu 終わり -->
+        <!--------------------------------------------------------->
+        <div id="right">
+          <!--------------------------------------------------------->
+          <div id="path"><a href="{% include link.html path='/new/index.html' %}" class="ls">HOME</a>　＞　BL46XU</div>
+          <div class="bar">BL46XU （産業利用ビームラインⅢ）</div>
+          <div class="icon"><a name="outline"></a>概要</div>
+          <table width="500">
+            <tbody>
+              <tr>
+                <td><img src="image/bl46xu_top01.jpg"></td>
+                <th>Visitor No.
+</th>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <p> 　本ビームラインは産業界による放射光利用の促進を主な目的とする、アンジュレータ光源を用いた産業利用ビームラインです。 第一実験ハッチには多軸X線回折装置を、第二実験ハッチ硬X線光電子分光装置を常設しています。<br>
+            <br>
+            詳細については<a href="http://www.spring8.or.jp/wkg/BL46XU/instrument/lang/INS-0000000556/instrument_summary_view"
+
+              target="_blank"> こちら(JASRI公式ページ)</a> を参照下さい。<br>
+            <br>
+            　光源はSPring-8の標準型真空封止アンジュレータで、 モノクロメータはSi１１１結晶を用いた液体窒素冷却型二結晶モノクロメータを採用しています。 カバーできる X 線のエネルギー範囲は６～３５KeVです。 高調波除去用のX線ミラーは2枚のRh蒸着ミラー（長さ70cm　横はね配置)を光学ハッチ内最下流に設置しています。 これらミラーは湾曲機構を持っており、横方向の集光が可能です。 また、モノクロメータとミラーの間にチャンネルカットモノクロメーター （Si１１１結晶）を設置しており、 硬X線光電子分光測定の際にはこれを用いて狭いエネルギー幅の入射X線を確保しています。<br>
+            <br>
+            <font color="red"><b>（注）</b></font>薄膜構造評価専用X線回折装置（ATX-G）については<br>
+            　　　2011A第1期をもって下記の理由により標準装置としての運用を終了します。<br>
+            　　　理由1： 利用者の減少に伴う稼働率の低下（全マシンタイムの2%以下）<br>
+            　　　理由2： 新規実験装置（高エネルギー対応硬X線光電子分光装置）の導入 </p>
+          <br>
+          <div class="icon"> <a name="staff"></a>ビームライン担当者・連絡先 </div>
+          <div class="contact"> （注）e-mailアドレスは＠マーク以下を省略していますので、<br>
+            アカウントの後に@spring8.or.jpを付けてください。 <br>
+            <br>
+            小金澤 智之<br>
+            ビームライン主担当　第一ハッチ　X線回折・散乱担当<br>
+            公益財団法人 高輝度光科学研究センター(JASRI)<br>
+            〒679-5198　兵庫県佐用郡佐用町光都1丁目1-1<br>
+            Phone : 0791-58-0832 <br>
+            PHS: 3377 <br>
+            FAX : 0791-58-0830<br>
+            e-mail : koganeza <br>
+            <br>
+            安野 聡<br>
+            ビームライン副担当　第二ハッチ　HAXPES担当<br>
+            公益財団法人 高輝度光科学研究センター(JASRI)<br>
+            〒679-5198　兵庫県佐用郡佐用町光都1丁目1-1<br>
+            Phone : 0791-58-0832 <br>
+            PHS: 3493 <br>
+            FAX : 0791-58-0830<br>
+            e-mail : yasuno </div>
+          <!---------------------------------------------------------> </div>
+        <!-- right 終わり --> </div>
+      <!-- main 終わり -->
+      <html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div id="footer"> |　<a href="{% include link.html path='/new/index.html' %}" class="foot">HOME</a>　 |　<a
+
+        href="{% include link.html path='/new/copyright-policy.html' %}" class="foot">著作権の帰属について</a>　 |　<a
+
+        href="{% include link.html path='/new/inquiries.html' %}" class="foot">お問い合わせ</a> |　<a
+
+        href="#top" class="foot">ページトップへ</a>　|
+      <div id="footer_lower">
+        <h3>Copyright(C)2009 JASRI All Rights Reserved.</h3>
+      </div>
+    </div>
+    <!-- footer 終わり -->
+    <!--------------------------------------------------------->
+    <!------ container 終わり ------> <br>
+  </body>
+</html>
+ </div>
+  </body>
+</html>

@@ -1,0 +1,453 @@
+---
+# 現行のHTMLをそのまま移行。Googleドライブ・未移行ページへのリンクだけ Liquid で差し替えている
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script type="text/javascript" src="./java/browser.js"></script>
+
+<style Type="text/css">
+<!--
+#contents {
+	line-height: 1.7em;
+	}
+	
+	a:link.ls {color:#0066ff; text-decoration:none;}
+	a:visited.ls {color:#0066ff; text-decoration:none;}
+	a:hover.ls {color:blue; text-decoration:underline; background-color:#fed4e1;}
+	a:active.ls {color:#0066ff; text-decoration:none;}
+
+
+table {
+	color: #333333;
+	margin-top: 5px;
+	margin: 10px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+	
+table.b{
+    margin: 0px 0px;
+	border: 1px #888888 solid;
+	border-collapse: collapse;
+	}
+
+th.a{
+	background-color: #66FF66;
+	border: 1px #888888 solid;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
+	width: 100px;
+	}
+th.b{
+	border: 1px #888888 solid;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 0.8em;
+	}
+
+td{
+	border: 1px #888888 solid; 
+	line-height: 20px;
+	padding: 5px 0px 5px 10px;
+	line-height: 18px;
+	text-align: left;
+	}
+	
+
+-->
+</style>
+
+ </head>
+<body>
+
+
+
+
+<title>SPECコマンドリスト(BL19B2）</title>
+</head>
+<body id="bodyid">
+<a name="TopofPage"></a>
+<div id="page">
+<div id="page2">
+<div id="banner">
+<h1>SPECコマンドリスト(BL19B2）</h1>
+</div>
+
+<table class=b cellspacing="0" cellpadding="0" id="menu"><tr><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'" style="border-left-width:0">
+<a href="basic_cmd.html"><span style="color: #0066FF;">回折計制御コマンド</span></a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="monochro_cmd.html">光源制御コマンド</a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="utility_cmd.html">便利なコマンド </a></td><td onmouseover="this.style.backgroundImage='URL(img/menubg2.png)'" onmouseout="this.style.backgroundImage='URL(img/menubg.png)'">
+<a href="make_cmd.html">コマンドを作ろう</a></td></tr></table>
+
+<div id="main">
+<table id="image" cellspacing="0" cellpadding="0"><tr><td valign="top">
+<h3></h3>
+</td></tr></table>
+<div id="left">
+<div id="sidemenu">
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="basic_cmd.html">① 基本制御コマンド</a></li>
+<li><a href="exp_cmd.html"><span style="font-weight: bold; color: #0066FF;">② 実験用コマンド</span></a></li>
+<li><a href="camp_cmd.html">③ カレントアンプ制御コマンド </a></li>
+<li><a href="MBSDSS_cmd.html">④ MBS、DSS制御コマンド</a></li>
+<li><a href="accessary_cmd.html">⑤ 周辺機器制御コマンド</a></li>
+</ul>
+
+
+<h2>　　　　　</h2>
+<ul>
+<li>BL19B2多軸回折計トップに戻る</li>
+</ul>
+
+<!--
+<h2>サイドメニュー</h2>
+<ul>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+<li><a href="{% include link.html path='/BL/bl19b2/huber19/spec_cmd_list/ここにＵＲＬ' %}">メニュー</a></li>
+</ul>
+-->
+</div>
+</div>
+
+
+<div class="list">
+<font color="#555555"><b>リスト</b></font>
+</div>
+
+<div class="list">
+<!-- -------------------------------------------------------- -->
+<a href="#1" class="ls">◇ a. 応力測定</a><br>
+<a href="#2" class="ls">◇ b. IPカメラ</a><br>
+<a href="#3" class="ls">◇ c. 反射率測定＜refscan＞</a><br>
+<a href="#4" class="ls">◇ d. ロッキング測定＜rockscan＞</a><br>
+<!--  
+<a href="#5" class="ls">◇ e. </a><br>
+<a href="#6" class="ls">◇ f. </a><br>
+-->
+<!-- -------------------------------------------------------- -->
+</div>
+
+<br>
+
+<div id="right">
+<h2>0. 自動アッテネーター切替スキャン</h2>
+<p>
+
+
+簡易マニュアル
+
+
+
+<a name="1"><br>
+
+<div id="right">
+<h2>a. 応力測定</h2>
+<p>
+
+<!--
+ここに文章を書いてください。
+-->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">応力測定用コマンド　<span style="color: rgb(255, 0, 0);">(中断：Ctrl-c)</span></big><br>
+<div style="margin-left: 40px;"><br>
+＊<span style="color: rgb(255, 0, 0);">注意点：</span><br>
+１．θ軸を使った揺動を行うときはモーターの冷却が必要なので担当者に必ず相談すること<br>
+２．カウント時間はm×10<sup>n</sup>　m=１～９、n=-1～9
+</div>
+<br>
+<span style="font-weight: bold;">揺動付sin<sup>2</sup>ψ法</span><br>
+
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+	<tr>
+      <td>並傾法：<br>ω揺動付</td>
+	  <th class=a>rsthf_p</th>
+	  <th class=b>[ψ角]　[2θstart　(a)]　[2θend　(a)]　[測定点分割数]<br>[揺動角（±?°)]　[揺動回数]　[θのオフセット角(試料セッティングによる)]</th>
+    </tr>
+	<tr>
+	  <td>並傾法：<br>φ揺動付</td>
+	  <th class=a>rsphif_p</th>
+	  <th class=b>[ψ角]　[2θstart　(a)]　[2θend　(a)]　[測定点分割数]<br>[揺動角（±?°)]　[揺動回数]　[θのオフセット角(試料セッティングによる)]</th>
+    </tr>
+	<tr>
+	  <td>側傾法：<br>ω揺動付</td>
+	  <th class=a>rsthf_s</th>
+	  <th class=b>[ψ角]　[2θstart　(a)]　[2θend　(a)]　[測定点分割数]<br>[揺動角（±?°)]　[揺動回数]　[θのオフセット角(試料セッティングによる)]</th>
+    </tr>
+	<tr>
+	  <td>側傾法：<br>φ揺動付</td>
+	  <th class=a>rsphif_s</th>
+	  <th class=b>[ψ角]　[2θstart　(a)]　[2θend　(a)]　[測定点分割数]<br>[揺動角（±?°)]　[揺動回数]　[θのオフセット角(試料セッティングによる)]</th>
+    </tr>
+</table>
+
+
+<br>
+<span style="font-weight: bold;">侵入深さ一定法<br>
+</span>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">使い
+方：</span><br>
+<span style="color: rgb(255, 0, 0);">１．侵入深さの設定の仕方</span><br>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">侵入深さ
+ratio</span>＝侵入深さの設定値 / 最大侵入深さ<br>
+（<span style="text-decoration: underline;">正反射時の侵入深さが最大</span>)<br>
+０＜ratio＜１<br>
+</div>
+<span style="color: rgb(255, 0, 0);">2．試料傾斜方向の設定</span><br>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">傾斜方向</span>：
+入射角小、出射角大の時＝－１　/　入射角大、出射角小の時 = １<br>
+</div>
+<span style="color: rgb(255, 0, 0);">2．面内方向制御について：試料のセットの仕方</span><br>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">org_phiコマンドで面内原点をφ=0にしているとき:</span><br>
+回折計をθ=0、χ=90、φ＝０の状態にして試料をセッティングする際に、測定したい歪の向きをビームに対し水平面内で垂直にセットする。<br>
+</div>
+</div>
+
+<br>
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+      <td colspan="2">動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+	<tr>
+      <td colspan="2">侵入深さ一定法</td>
+	  <th class=a>cpd_scan </th>
+	  <th class=b>[2θscan範囲の中心値　(a)]　[2θscan範囲（±?°)][sin2ψ値]<br>[侵入深さratio] 　[測定点分割数]　[カウント時間]　[傾斜方向] </th>
+    </tr>
+	<tr>
+	  <td colspan="2">侵入深さ一定法：<br>φ揺動付 </td>
+	  <th class=a>cpd_fscan </th>
+	  <th class=b>[2θscan範囲の中心値　(a)]　[2θscan範囲（±?°)]　[sin2ψ値]<br>[侵入深さratio] 　[測定点分割数]　[揺動角（±?°)]　[揺動回数]　[傾斜方向] </th>
+    </tr>
+	<tr>
+	  <td colspan="2">侵入深さ一定法：<br>面内方向制御付</td>
+	  <th class=a>ocpd_scan </th>
+	  <th class=b>[2θscan範囲の中心値　(a)]　[2θscan範囲（±?°)]　[sin2ψ値]<br>[侵入深さratio] 　[測定点分割数]　[カウント時間]　[傾斜方向] </th>
+    </tr>
+	<tr>
+	  <td colspan="2">侵入深さ一定法：<br>面内方向制御<br>φ遥動付</td>
+	  <th class=a>ocpd_fscan </th>
+	  <th class=b>[2θscan範囲の中心値　(a)]　[2θscan範囲（±?°)]　[sin2ψ値]<br>[侵入深さratio] 　[測定点分割数]　[揺動角（±?°)]　[揺動回数]　[傾斜方向]</th>
+    </tr>
+	<tr>
+	  <td rowspan="2">面内方向制御：<br>原点の変更 </td>
+	  <th class=b>原点の変更 </th>
+	  <th class=a>org_phi </th>
+	  <th class=b>[φの原点位置]／（パラメータを与えないとき）：現在位置を原点としてセットする </th>
+    </tr>
+	<tr>
+	  <th class=b>現在の原点の表示  </th>
+	  <th class=a>p_org_phi  </th>
+	  <th class=b>なし</th>
+    </tr>
+</table>
+
+
+
+
+
+<span style="font-weight: bold;">侵入深さ一定法シュミレーション</span><br>
+
+<br>
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ　＜(a)：絶対値　(r)：相対値＞</td>
+    </tr>
+	<tr>
+      <td>侵入深さ一定法のシュミレーション </td>
+	  <th class=a>cpd_scan_cal</th>
+	  <th class=b>[2θscan範囲の中心値　(a)]　[2θscan範囲（±?°)][sin2ψ値]　[侵入深さratio] 　[測定点分割数]　[傾斜方向]</th>
+    </tr>
+	<tr>
+      <td>侵入深さ一定法：面内方向制御付のシュミレーション</td>
+	  <th class=a>ocpd_scan_cal</th>
+	  <th class=b>[2θscan範囲の中心値　(a)]　[2θscan範囲（±?°)][sin2ψ値]　[侵入深さratio] 　[測定点分割数]　[傾斜方向]</th>
+    </tr>
+</table>
+<br>
+
+
+<br>
+<span style="font-weight: bold;">ちょっと便利なコマンド<br>
+
+
+<table width=500>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+	<tr>
+      <td>sin2ψ→ψ角　計算</td>
+	  <th class=a>calc_psi </th>
+	  <th class=b>[sin2ψ値] </th>
+    </tr>
+	<tr>
+      <td>ψ角→sin2ψ　計算</td>
+	  <th class=a>calc_sn2ps </th>
+	  <th class=b>[ψ値]</th>
+    </tr>
+</table>
+
+
+
+</p>
+
+
+<a name="2"></a><br>
+
+<h2>b. IPカメラ</h2>
+<p>
+
+
+<!--
+ここに文章を書いてください。
+-->
+
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold;">IPカメラの制御　<span style="color: rgb(255, 0, 0);">(中断：Ctrl-c)</span></big><br>
+<br>
+<div style="margin-left: 40px;">＊<span style="color: rgb(255, 0, 0);">注意点</span>：<br>
+１．時間はm×10<sup>n</sup>　m=１～９、n=-1～9<br>
+２．Ctrl-cで中断してもシャッターは閉まりません。注意！</div>
+<br>
+<span style="font-weight: bold;">標準</span><br>
+
+<br>
+
+<table width=500>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+	<tr>
+      <td>シャッター開</td>
+	  <th class=a>sht_op</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>シャッター閉</td>
+	  <th class=a>sht_cl </th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>シャッターの現状表示</td>
+	  <th class=a>get_sht</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>時間を設定して露光</td>
+	  <th class=a>ipcamera</th>
+	  <th class=b>[露光時間（sec)]</th>
+    </tr>
+</table>
+
+
+
+
+<span style="font-weight: bold;">経時変化測定<br>
+
+
+
+<table width=700>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+	<tr>
+      <td>IPの移動速度の設定</td>
+	  <th class=a>ipc_set</th>
+	  <th class=b>[移動スピード（mm/sec)]</th>
+    </tr>
+	<tr>
+      <td>IPの移動スピードの表示</td>
+	  <th class=a>get_ipc</th>
+	  <th class=b>なし</th>
+    </tr>
+	<tr>
+      <td>IPを移動させながら露光</td>
+	  <th class=a>ipcam_t</th>
+	  <th class=b>[total露光時間(sec)]　[時間vs移動 位置サンプリング（sec）]</th>
+    </tr>
+</table>
+
+
+
+</p>
+
+<a name="3"></a><br>
+
+<h2>c. 反射率測定</h2>
+<p>
+
+<table width=500>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+	<tr>
+      <td>反射率測定</td>
+	  <th class=a>refscan</th>
+	  <th class=b>[開始角度]　[終了角度]　[分割数]　[積算時間]</th>
+    </tr>
+</table>
+</p>
+
+
+<a name="4"></a><br>
+
+<h2>d. ロッキング測定</h2>
+<p>
+<table width=500>
+    <tr bgcolor="#cccccc">
+      <td>動作</td>
+	  <td>コマンド</td>
+	  <td>パラメータ</td>
+    </tr>
+	<tr>
+      <td>ロッキング測定</td>
+	  <th class=a>rockscan</th>
+	  <th class=b>[開始角度]　[終了角度]　[分割数]　[積算時間]</th>
+    </tr>
+</table>
+</p>
+
+
+
+
+
+
+<div id="pagetop">
+<img src="img/pagetop.png" border="0" width="11" height="9" alt="PageTop">
+<a href="#TopofPage">このページのトップへ</a>
+</div>
+</div>
+<div id="copy">
+Copyright (C) 2005 (財)高輝度光科学研究センター　産業利用推進室, All rights reserved.  
+</div>
+</div>
+</div>
+</div>
+<img src="img/menubg2.png" alt="omo" id="omo">
+</body>
+</html>
