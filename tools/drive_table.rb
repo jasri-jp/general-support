@@ -1,5 +1,5 @@
 # 配布ファイル（Google ドライブ）の対応表 general-support-data/README.md を作り直す。
-#   pixi run drive-table                       … ../general-support-data/README.md に書く（共有ドライブ上の作業フォルダ用）
+#   pixi run drive-table                       … ../../general-support-data/README.md に書く（共有ドライブ上の管理者用フォルダ application/general-support 用）
 #   pixi run drive-table -- <README.md のパス>  … 指定したファイルに書く
 #     例 pixi run drive-table -- "G:\共有ドライブ\support-web\general-support-data\README.md"
 #   pixi run drive-table -- -                  … 画面に出すだけ
@@ -15,7 +15,7 @@ DOCS = File.join(ROOT, 'docs')
 DRIVE_YML = File.join(DOCS, '_data', 'drive.yml')
 FOLDER_URL = 'https://drive.google.com/drive/folders/1tSBUHoIgqBzBV0BohBiZRSjQ4JHYkISH'
 
-out = ARGV[0] || File.join(ROOT, '..', 'general-support-data', 'README.md')
+out = ARGV[0] || File.join(ROOT, '..', '..', 'general-support-data', 'README.md')
 if out != '-' && !File.directory?(File.dirname(out))
   abort "出力先のフォルダがありません: #{File.dirname(out)}\n" \
         '共有ドライブの general-support-data/README.md のパスを指定してください（例 pixi run drive-table -- "G:\\共有ドライブ\\support-web\\general-support-data\\README.md"）'

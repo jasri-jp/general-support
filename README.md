@@ -52,7 +52,7 @@ PDF・zip・exe などの配布ファイルは、このリポジトリには入�
 - ドライブ側でファイルを差し替えるときは「版を管理」で上書きする（ID が変わらないので、サイト側の変更は不要）。
 - ドライブのフォルダ（`general-support-data`）の README.md に、全ファイルの対応表（ドライブのリンクとリンク元ページ）がある。
   `drive.yml` やページを変えたら `pixi run drive-table` で作り直す（`tools/drive_table.rb`。手で編集しない）。
-  共有ドライブの外に clone した場合は、出力先を指定する：`pixi run drive-table -- "G:\共有ドライブ\support-web\general-support-data\README.md"`
+  共有ドライブ上の管理者用フォルダ（`support-web/application/general-support`）以外に clone した場合は、出力先を指定する：`pixi run drive-table -- "G:\共有ドライブ\support-web\general-support-data\README.md"`
 
 ## 手元でサイトを立ち上げる
 
@@ -79,8 +79,9 @@ pixi run serve
   Windows のパス長の上限（260文字）を超えて `pixi run setup` が失敗する。
 - **Google ドライブなど同期されるフォルダの中でも、そのまま `pixi run setup` / `pixi run serve` で立ち上げられる**。
   Ruby などの環境（`.pixi/`、約2万ファイル・200MB）は最初の1回だけドライブに同期される。`serve` のビルド結果は一時フォルダに出力するので、編集のたびに同期が走ることはない。
-- 正本の作業フォルダは共有ドライブ `support_web/general-support`（`.git` もこの中にあり、`git pull` / `commit` / `push` はここで行う）。
-  ドライブの同期で `.git` が壊れないよう、次を守る。
+- 正本は GitHub のこのリポジトリ。更新する人は各自の PC に `git clone` して、`git pull` してから作業し、終わったら `git push` する。
+- 共有ドライブ `support-web/application/general-support` は管理者用の作業フォルダ（`.git` もこの中にある）。`application/` は管理者だけが開けるようにしてあり、ほかの人は使わない。
+  管理者がここで git を使うときは、ドライブの同期で `.git` が壊れないよう、次を守る。
   - 同じフォルダで、2台以上の PC から同時に git を操作しない（作業する PC を1台に決めるか、交代するときは同期が終わってから）。
   - 区切りごとにこまめに `git push` する。`.git` が壊れても、GitHub から `git clone` し直せば元に戻せる。
   - git がエラー（`index.lock` が残っている、オブジェクトが壊れている など）を出したら、ドライブの同期が終わるのを待ってからやり直す。
