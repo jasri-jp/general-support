@@ -9,8 +9,8 @@ Jekyll で作っていて、GitHub の組織 jasri-jp のリポジトリ https:/
 
 ```
 README.md                     この説明
-pixi.toml, pixi.lock          手元で立ち上げるための設定（pixi run setup / serve / serve-lan / build）
-tools/                        立ち上げ用のスクリプト
+pixi.toml, pixi.lock          手元で立ち上げるための設定（pixi run setup / serve / serve-lan / build / drive-table）
+tools/                        立ち上げ用のスクリプトと、配布ファイルの対応表を作るスクリプト（drive_table.rb）
 Gemfile                       Ruby（Bundler）で立ち上げる場合の設定
 docs/                         ← サイト本体。この中がそのまま https://info.jasri.jp/general-support/ になる
   _config.yml                 サイト設定（url, baseurl, legacy_url）
@@ -50,6 +50,9 @@ PDF・zip・exe などの配布ファイルは、このリポジトリには入�
 - ページからは `{% include drive_url.html path="/現行のパス" %}` でリンクする。
 - `file_id` が空のファイルは、`docs/_config.yml` の `legacy_url`（現行サーバー）の同じパスにリンクする。
 - ドライブ側でファイルを差し替えるときは「版を管理」で上書きする（ID が変わらないので、サイト側の変更は不要）。
+- ドライブのフォルダ（`general-support-data`）の README.md に、全ファイルの対応表（ドライブのリンクとリンク元ページ）がある。
+  `drive.yml` やページを変えたら `pixi run drive-table` で作り直す（`tools/drive_table.rb`。手で編集しない）。
+  共有ドライブの外に clone した場合は、出力先を指定する：`pixi run drive-table -- "G:\共有ドライブ\support-web\general-support-data\README.md"`
 
 ## 手元でサイトを立ち上げる
 

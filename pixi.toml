@@ -3,6 +3,7 @@
 #   pixi run serve   … http://127.0.0.1:4000/ で表示。ファイルを編集すると自動で作り直す
 #   pixi run serve-lan … 同じネットワークの他の PC からも見られるように起動（ファイアウォールの許可が必要。README 参照）
 #   pixi run build   … _site/ に出力するだけ
+#   pixi run drive-table … 配布ファイルの対応表 general-support-data/README.md を作り直す
 [workspace]
 name = "general-support"
 channels = ["conda-forge"]
@@ -16,3 +17,4 @@ setup = "ruby tools/setup.rb"
 build = "ruby tools/local_server.rb --build-only"
 serve = "ruby tools/local_server.rb"
 serve-lan = "ruby tools/local_server.rb --host 0.0.0.0"
+drive-table = "ruby tools/drive_table.rb"
