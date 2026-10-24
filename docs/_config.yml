@@ -11,11 +11,8 @@ url: "https://info.jasri.jp"
 # リポジトリ名と同じにする（試験公開の https://jasri-jp.github.io/general-support/ でも同じ）。
 baseurl: "/general-support"
 
-# 旧 URL の support.spring8.or.jp は、別リポジトリ（support_redirect）でここへ転送する。
-
-# まだ移行していないページ・フォームへのリンク先（移行期間用。現行サーバー）。
-# 現行サーバーを止める前に "" にする（support.spring8.or.jp を転送に切り替えた後も
-# ここが残っていると、新サイト → 旧 URL → 新サイトと転送が循環する）。
+# まだ移行していないページ・フォームへのリンク先（現行サーバー）。
+# 旧 URL の support.spring8.or.jp（現行サーバー）はそのまま動かし、転送には切り替えない。
 legacy_url: "https://support.spring8.or.jp"
 
 # Google ドライブ（jasri-service.jp）に置いたファイルは _data/drive.yml で管理する。

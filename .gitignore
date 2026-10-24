@@ -4,5 +4,4 @@
 /vendor/
 /Gemfile.lock
 desktop.ini
-/.pixi/*
-!/.pixi/config.toml
+/.pixi/

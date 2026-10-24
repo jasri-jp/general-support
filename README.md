@@ -1,7 +1,7 @@
 # info.jasri.jp/general-support（旧 support.spring8.or.jp）
 
 JASRI 産学総合支援室のサイト（SPring-8 の産業利用支援）のソースです。
-公開 URL は https://info.jasri.jp/general-support/ で、旧 URL の support.spring8.or.jp からはパスを保ったまま転送します。
+公開 URL は https://info.jasri.jp/general-support/ です。旧 URL の support.spring8.or.jp（現行サーバー）はそのまま動かし、まだ移していないページ・フォームはそちらへリンクします。
 Jekyll で作っていて、GitHub の組織 jasri-jp のリポジトリ https://github.com/jasri-jp/general-support から GitHub Pages で公開します。
 現行サイト（PHP）から、見た目と URL を変えずに移しています。
 
@@ -64,7 +64,7 @@ pixi run setup
 pixi run serve
 ```
 
-- `pixi run setup` は最初に1回だけ。Ruby と Jekyll 3.10 などを入れる。入れる先はこのフォルダではなくユーザーのキャッシュフォルダ（`.pixi/config.toml` の設定）なので、他の環境にもこのフォルダにも影響しない。
+- `pixi run setup` は最初に1回だけ。Ruby と Jekyll 3.10 などを入れる。入れる先はこのフォルダの `.pixi/`（`.gitignore` で除外しているので git には入らない。PC のほかの環境にも影響しない）。
 - `pixi run serve` で http://127.0.0.1:4000/general-support/ に表示される（公開時と同じく `baseurl` の下。http://127.0.0.1:4000/ からも転送される）。ファイルを編集・保存すると数秒で自動的に作り直される。終了は Ctrl+C。
 - ポートを変えるとき：`pixi run serve -- --port 4001`
 - `pixi run build` は `_site/` に出力するだけ。
@@ -75,7 +75,7 @@ pixi run serve
 - **Windows では短いパスにクローンする**（例 `C:\work\general-support`）。Jekyll の中に深い階層のファイルがあり、パスが長いと
   Windows のパス長の上限（260文字）を超えて `pixi run setup` が失敗する。
 - **Google ドライブなど同期されるフォルダの中でも、そのまま `pixi run setup` / `pixi run serve` で立ち上げられる**。
-  Ruby などの環境はドライブの外に作られ、`serve` のビルド結果も一時フォルダに出力するので、大量のファイルが同期されることはない。
+  Ruby などの環境（`.pixi/`、約2万ファイル・200MB）は最初の1回だけドライブに同期される。`serve` のビルド結果は一時フォルダに出力するので、編集のたびに同期が走ることはない。
 - 正本の作業フォルダは共有ドライブ `support_web/general-support`（`.git` もこの中にあり、`git pull` / `commit` / `push` はここで行う）。
   ドライブの同期で `.git` が壊れないよう、次を守る。
   - 同じフォルダで、2台以上の PC から同時に git を操作しない（作業する PC を1台に決めるか、交代するときは同期が終わってから）。
@@ -149,9 +149,7 @@ GitHub の組織 [jasri-jp](https://github.com/jasri-jp) の `general-support` �
 
 ### 本番（info.jasri.jp/general-support）
 
-新しい URL で先に公開し、移行が終わってから旧 URL を転送に切り替える。2段階にすることで、現行サーバーを止める前に新サイトを並行して動かせる。
-
-**段階1：新しい URL で公開する（現行サーバーはそのまま）**
+新しい URL で公開する。現行サーバー（support.spring8.or.jp）はそのまま動かし、旧 URL からの転送はしない。
 
 1. 組織の Settings → Pages → Add a domain で `jasri.jp` を登録し、表示された TXT レコード（`_github-pages-challenge-jasri-jp.jasri.jp`）を DNS に追加して Verify する。
    登録しておくと、ほかのアカウントが `*.jasri.jp` の名前を GitHub Pages に設定できなくなる。
@@ -159,17 +157,6 @@ GitHub の組織 [jasri-jp](https://github.com/jasri-jp) の `general-support` �
 3. 組織サイト（`jasri-jp.github.io` リポジトリ。サイトの一覧ページ）を公開し、Custom domain に `info.jasri.jp` を設定する。
    これで `https://jasri-jp.github.io/general-support/` は `https://info.jasri.jp/general-support/` に変わる（このリポジトリ側の設定は不要）。
 4. 証明書が発行されたら、組織サイトで「Enforce HTTPS」を有効にする。
-5. この時点では `legacy_url` は現行サーバーのまま。まだ移していないフォームなどは現行サーバーへリンクされる。
-
-**段階2：旧 URL を転送に切り替え、現行サーバーを止める**
-
-1. フォームなど現行サーバーに残っているものの置き換え先を決め、リンクを差し替える。
-2. `docs/_config.yml` の `legacy_url` を `""` にする（残したまま旧 URL を転送にすると、転送が循環する）。
-3. 組織の Settings → Pages → Add a domain で `spring8.or.jp` も同じように登録・認証する。
-4. 転送用のリポジトリ（`support-redirect`。`CNAME` と、同じパスで新しい URL へ転送する `404.html`・`index.html` だけのサイト）を
-   GitHub Pages で公開し、Custom domain に `support.spring8.or.jp` を設定する。
-5. DNS 管理者に `support.spring8.or.jp` の CNAME を `jasri-jp.github.io` に変更してもらう。
-   以後 `https://support.spring8.or.jp/BL/bl14b2/index.html` は `https://info.jasri.jp/general-support/BL/bl14b2/index.html` へ転送される。
-6. 証明書が発行されたら「Enforce HTTPS」を有効にし、現行サーバーを停止する。
+5. `docs/_config.yml` の `legacy_url` は現行サーバーのまま。まだ移していないフォームなどは現行サーバーへリンクされる。
 
 全ページには `<link rel="canonical">` で新しい URL を書いている（レイアウトを使うページ）。検索結果は順に新しい URL に置き換わる。
