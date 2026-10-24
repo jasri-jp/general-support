@@ -61,13 +61,17 @@ PDF・zip・exe などの配布ファイルは、このリポジトリには入�
 Ruby を別にインストールする必要はない。pixi（https://pixi.sh）だけ入れておく。
 
 ```
+pixi config set --global detached-environments true
 git clone https://github.com/jasri-jp/general-support.git
 cd general-support
 pixi run setup
 pixi run serve
 ```
 
-- `pixi run setup` は最初に1回だけ。Ruby と Jekyll 3.10 などを入れる。入れる先はこのフォルダの `.pixi/`（`.gitignore` で除外しているので git には入らない。PC のほかの環境にも影響しない）。
+- `pixi config set --global detached-environments true` は PC ごとに最初に1回だけ。pixi の環境（Ruby など）をこのフォルダの `.pixi/` ではなく、
+  ユーザーのキャッシュ（`C:\Users\<ユーザー>\AppData\Local\rattler\cache\envs\`）に作るようにする。
+  このフォルダには `.pixi/envs/README.txt` だけができる（`.gitignore` で除外しているので git には入らない）。
+- `pixi run setup` は最初に1回だけ。Ruby と Jekyll 3.10 などを pixi の環境に入れる（PC のほかの環境には影響しない）。
 - `pixi run serve` で http://127.0.0.1:4000/general-support/ に表示される（公開時と同じく `baseurl` の下。http://127.0.0.1:4000/ からも転送される）。ファイルを編集・保存すると数秒で自動的に作り直される。終了は Ctrl+C。
 - ポートを変えるとき：`pixi run serve -- --port 4001`
 - `pixi run build` は `_site/` に出力するだけ。
@@ -77,8 +81,10 @@ pixi run serve
 
 - **Windows では短いパスにクローンする**（例 `C:\work\general-support`）。Jekyll の中に深い階層のファイルがあり、パスが長いと
   Windows のパス長の上限（260文字）を超えて `pixi run setup` が失敗する。
-- **Google ドライブなど同期されるフォルダの中でも、そのまま `pixi run setup` / `pixi run serve` で立ち上げられる**。
-  Ruby などの環境（`.pixi/`、約2万ファイル・200MB）は最初の1回だけドライブに同期される。`serve` のビルド結果は一時フォルダに出力するので、編集のたびに同期が走ることはない。
+- **Google ドライブなど同期されるフォルダの中で使うときは、必ず `detached-environments` を有効にしておく**。
+  有効でないと、Ruby などの環境（約2万ファイル・200MB）がフォルダの中の `.pixi/` に作られ、ドライブに同期される。
+  同期されるフォルダに大量のファイルを書くと、作業が極端に遅くなったり、プログラムが固まってフォルダを消せなくなったりする。
+  `serve` のビルド結果は一時フォルダに出力するので、編集のたびに同期が走ることはない。
 - 正本は GitHub のこのリポジトリ。更新する人は各自の PC に `git clone` して、`git pull` してから作業し、終わったら `git push` する。
 - 共有ドライブ `support-web/application/general-support` は管理者用の作業フォルダ（`.git` もこの中にある）。`application/` は管理者だけが開けるようにしてあり、ほかの人は使わない。
   管理者がここで git を使うときは、ドライブの同期で `.git` が壊れないよう、次を守る。

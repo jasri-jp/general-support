@@ -1,5 +1,6 @@
 # 手元でサイトを立ち上げるための設定（pixi: https://pixi.sh）
-#   pixi run setup   … 最初に1回。Jekyll などをこのフォルダの環境に入れる
+#   pixi run setup   … 最初に1回。Jekyll などを pixi の環境に入れる
+#                      （環境は detached-environments でフォルダの外に作る。README の「手元でサイトを立ち上げる」）
 #   pixi run serve   … http://127.0.0.1:4000/ で表示。ファイルを編集すると自動で作り直す
 #   pixi run serve-lan … 同じネットワークの他の PC からも見られるように起動（ファイアウォールの許可が必要。README 参照）
 #   pixi run build   … _site/ に出力するだけ
