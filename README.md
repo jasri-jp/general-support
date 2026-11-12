@@ -36,6 +36,7 @@ docs/                         ← サイト本体。この中がそのまま htt
 
 ## よくある更新
 
+- **問い合わせ先メール**：`docs/_data/contact.yml` の `local`（アカウント）と `domain` を変更する。`contact_email.html` で共通表示し、@ は画像、メールリンクなし。迷惑メールを完全に防ぐものではない。
 - **トップのお知らせ**：`docs/index.html` 先頭の `notice:` を書き換える。
 - **Latest News**：`docs/_data/news.yml` の先頭に1件追加する。
 - **メニュー**：`docs/_data/top_menu.yml`（トップ系の全ページに反映される）。

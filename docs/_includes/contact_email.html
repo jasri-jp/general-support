@@ -1,0 +1,5 @@
+{%- comment -%}
+  収集対策として @ は画像で表示し、完全なアドレスを mailto や属性に記載しない。
+  暗い背景では light=true を指定する。
+{%- endcomment -%}
+<span class="contact-email">{{ site.data.contact.local }}<img src="{{ '/assets/images/email-at.svg' | relative_url }}" alt="アットマーク" width="16" height="16" style="display:inline-block;width:1em;height:1em;max-width:none;vertical-align:-0.12em;{% if include.light %}filter:invert(1);{% endif %}">{{ site.data.contact.domain }}</span>
